@@ -1929,154 +1929,6 @@ k_frisia = {
 			}
 		}
 	}
-
-	d_artois = {
-		color = { 117 127 174 }
-		color2 = { 255 255 255 }
-		
-		culture = dutch
-		
-		capital = 77 #Artois
-		
-		allow = { 
-			is_adult = yes
-			has_regent = no
-			war = no
-		}
-		
-		c_artois = {
-			color = { 106 127 51 }
-			color2 = { 255 255 255 }
-			
-			b_arras = {
-				dutch = "Atrecht"
-				german = "Atrecht"		
-			}
-			b_terwaan = {}
-			b_bethune = {}
-			b_lens = {}
-			b_lille = {
-				dutch = "Rijsel"
-			}
-			b_bouvines = {}
-			b_beaumetz = {}
-			b_bapaume = {}
-		}	
-		c_boulogne = {
-			color = { 77 22 178 }
-			color2 = { 255 255 255 }
-			
-			dutch = "Bonen"
-			
-			b_boulogne = {
-				dutch = "Bonen"
-			}
-			b_saintpol = {}
-			b_hesdin = {}
-			b_fauquembergues = {}
-			b_ternouis = {}
-			b_therouanne = {}
-			b_ardres = {}
-		}	
-		c_guines = {
-			color = { 240 190 183 }
-			color2 = { 255 255 255 }
-			
-			dutch = "Giezene"
-			
-			b_guines = {
-				dutch = "Giezene"
-			}
-			b_saintomer = {}
-			b_calais = {}
-			b_dunkerque = {}
-			b_bourbourg = {}
-			b_marck = {}
-			b_gravelines = {}
-			b_coulogne = {}
-		}
-	}
-	d_flanders = {
-		color = { 240 167 130 }
-		color2 = { 48 48 48 }
-		
-		culture = dutch
-		
-		capital = 78 #Brugge
-		
-		allow = { 
-			is_adult = yes
-			has_regent = no
-			war = no
-		}
-		
-		c_yperen = {
-			color = { 127 152 36 }
-			color2 = { 255 255 255 }
-			
-			b_ypres = {}
-			b_rosebeke = {}
-			b_cassel = {}
-			b_roeselare = {}
-			b_poperinge = {}
-			b_menen = {}
-			b_diksmuide = {}
-			b_wervik = {}
-		}
-		c_brugge = {
-			color = { 184 50 173 }
-			color2 = { 255 255 255 }
-			
-			frankish = "Bruges"
-			
-			b_brugge = {
-				frankish = "Bruges"
-			}
-			b_damme = {}
-			b_sluys = {
-				frankish = "L'Ecluse"
-				norman = "L'Ecluse"
-				occitan = "L'Ecluse"
-			}
-			b_oostende = {}
-			b_male = {}
-			b_nieuwpoort = {}
-			b_torhout = {}
-			b_aardenburg = {}
-		}
-		c_gent = {
-			color = { 187 198 243 }
-			color2 = { 255 255 255 }
-			
-			b_gent = {}
-			b_doornik = {
-				frankish = "Tournai"
-				occitan = "Tournai"
-				norman = "Tornai"
-			}
-			b_oudenaarde = {}
-			b_aalst = {}
-			b_st_niklaas = {}
-			b_dendermonde = {}
-			b_kortrijk = {}
-			b_geraardsbergen = {}
-		}
-		c_hainaut = {
-			color = { 138 192 23 }
-			color2 = { 255 255 255 }
-		
-			b_valenciennes = {}
-			b_cambrai = {}
-			b_avesnes = {}
-			b_mons = {
-				dutch = "Bergen"
-			}
-			b_chievres = {}
-			b_enghien = {}
-			b_charleroi = {}
-			b_ath = {}
-		}
-	}
 	d_holland = {
 		color = { 150 150 55 }
 		color2 = { 255 255 255 }
@@ -2286,9 +2138,7 @@ k_germany = {
 				NOT = {
 					has_landed_title = e_byzantium
 					top_liege = {
-						OR = {
-							has_landed_title = e_byzantium
-						}
+						has_landed_title = e_byzantium
 					}
 				}
 			}
@@ -2309,6 +2159,57 @@ k_germany = {
 					has_holder = yes
 				}
 			}
+		}
+	}
+	d_saxony = {
+		color = { 164 162 162 }
+		color2 = { 255 255 255 }
+		
+		capital = 310 #Anhalt
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+		}
+		
+		c_plauen = {
+			color = { 36 204 187 }
+			color2 = { 255 255 255 }
+
+			pommeranian = Ploni
+			
+			b_plauen = {				
+				pommeranian = Ploni
+			}
+			b_leipzig = {
+				pommeranian = Lipsk
+			}
+			b_merseburg = {}
+			b_halle = {
+				pommeranian = Dobrebora
+			}
+			b_knobelsdorf = {}
+			b_zeitz = {
+				pommeranian = Cici
+			}
+			b_zwickau = {
+				pommeranian = Swikawa
+			}
+			b_naumburg = {}
+		}
+		c_weimar = {
+			color = { 16 198 101 }
+			color2 = { 255 255 255 }
+			
+			b_weimar = {}
+			b_jena = {}
+			b_walkenried = {}
+			b_nordhausen = {}
+			b_memelsen = {}
+			b_gotha = {}
+			b_apoldoa = {}
+			b_gera = {}
 		}
 	}
 	d_swiss = {
@@ -2389,98 +2290,6 @@ k_germany = {
 			b_thusis = {}
 			b_glurns = {}
 			b_zuoz = {}
-		}
-	}
-	d_holstein = {
-		color = { 152 225 112 }
-		color2 = { 255 255 255 }
-		capital = 263 #Holstein
-		
-		danish = "Holsten"
-		swedish = "Holsten"
-		norwegian = "Holsten"
-		norse = "Holsten"
-		
-		allow = {
-			is_adult = yes
-			has_regent = no
-			war = no
-		}
-		
-		c_hamburg = {
-			color = { 181 161 34 }
-			color2 = { 255 255 255 }
-			
-			danish = "Hamborg"
-			swedish = "Hamborg"
-			norwegian = "Hamborg"
-			norse = "Hamborg"
-			
-			b_hamburg = {
-				danish = "Hamborg"
-				swedish = "Hamborg"
-				norwegian = "Hamborg"
-				norse = "Hamborg"
-			}
-			b_altona = {}
-			b_harburg = {}
-			b_brunsbuttel = {}
-			b_buxtehude = {}
-			b_dithmarschen = {}
-			b_niendorf = {}
-			b_lokstedt = {}
-		}
-		c_lubeck = {
-			color = { 175 199 12 }
-			color2 = { 255 255 255 }
-			
-			danish = "Lybæk"
-			swedish = "Lybäck"
-			norwegian = "Lybæk"
-			norse = "Lybæck"
-			pommeranian = "Liubice"
-			polish = "Liubice"
-			
-			b_lubeck = {
-				danish = "Lybæk"
-				swedish = "Lybäck"
-				norwegian = "Lybæk"
-				norse = "Lybæck"
-				pommeranian = "Liubice"
-				polish = "Liubice"
-			}
-			b_ratzeburg = {}
-			b_travemunde = {}
-			b_wulfsdorf = {}
-			b_schlutup = {}
-			b_starigard = {}
-			b_weslo = {}
-			b_bucu = {}
-		}
-		c_holstein = {
-			color = { 16 130 5 }
-			color2 = { 255 255 255 }
-			
-			danish = "Holsten"
-			swedish = "Holsten"
-			norwegian = "Holsten"
-			norse = "Holsten"
-			
-			b_kiel = {
-				norse = "Kíl"
-			}
-			b_gottorp = {}
-			b_itzehoe = {}
-			b_reinholdsburg = {}
-			b_elmshorn = {}
-			b_gluckstadt = {
-				danish = "Lykstad"
-				swedish = "Lyckstad"
-				norwegian = "Lykstad"
-				norse = "Lykstad"
-			}
-			b_lauenburg = {}
-			b_segeberg = {}
 		}
 	}
 	d_brunswick = {
@@ -2582,6 +2391,29 @@ k_germany = {
 			b_northeim = {}
 			b_eisenach = {}
 			b_detmold = {}
+		}
+		c_hamburg = {
+			color = { 181 161 34 }
+			color2 = { 255 255 255 }
+			
+			danish = "Hamborg"
+			swedish = "Hamborg"
+			norwegian = "Hamborg"
+			norse = "Hamborg"
+			
+			b_hamburg = {
+				danish = "Hamborg"
+				swedish = "Hamborg"
+				norwegian = "Hamborg"
+				norse = "Hamborg"
+			}
+			b_altona = {}
+			b_harburg = {}
+			b_brunsbuttel = {}
+			b_buxtehude = {}
+			b_dithmarschen = {}
+			b_niendorf = {}
+			b_lokstedt = {}
 		}
 	}
 	d_oldenburg = {
@@ -3217,6 +3049,10 @@ k_lotharingia = {
 					top_liege = { has_landed_title = e_byzantium }
 				}
 			}
+		}
+		NOT = {
+			top_liege = { has_landed_title = e_hre }
+			has_landed_title = e_hre
 		}
 		OR = {
 			AND = {
@@ -4434,6 +4270,33 @@ k_pomerania = {
 			b_hiddensee = {}
 			b_tribuzin = {}
 		}
+		c_lubeck = {
+			color = { 175 199 12 }
+			color2 = { 255 255 255 }
+			
+			danish = "Lybæk"
+			swedish = "Lybäck"
+			norwegian = "Lybæk"
+			norse = "Lybæck"
+			pommeranian = "Liubice"
+			polish = "Liubice"
+			
+			b_lubeck = {
+				danish = "Lybæk"
+				swedish = "Lybäck"
+				norwegian = "Lybæk"
+				norse = "Lybæck"
+				pommeranian = "Liubice"
+				polish = "Liubice"
+			}
+			b_ratzeburg = {}
+			b_travemunde = {}
+			b_wulfsdorf = {}
+			b_schlutup = {}
+			b_starigard = {}
+			b_weslo = {}
+			b_bucu = {}
+		}
 	}
 	d_pommerania = {
 		color = { 111 143 51 }
@@ -4490,57 +4353,6 @@ k_pomerania = {
 			b_kolbatz = {}
 			b_cedene = {}
 			b_pyritz = {}
-		}
-	}
-	d_saxony = {
-		color = { 164 162 162 }
-		color2 = { 255 255 255 }
-		
-		capital = 310 #Anhalt
-		
-		allow = {
-			is_adult = yes
-			has_regent = no
-			war = no
-		}
-		
-		c_plauen = {
-			color = { 36 204 187 }
-			color2 = { 255 255 255 }
-
-			pommeranian = Ploni
-			
-			b_plauen = {				
-				pommeranian = Ploni
-			}
-			b_leipzig = {
-				pommeranian = Lipsk
-			}
-			b_merseburg = {}
-			b_halle = {
-				pommeranian = Dobrebora
-			}
-			b_knobelsdorf = {}
-			b_zeitz = {
-				pommeranian = Cici
-			}
-			b_zwickau = {
-				pommeranian = Swikawa
-			}
-			b_naumburg = {}
-		}
-		c_weimar = {
-			color = { 16 198 101 }
-			color2 = { 255 255 255 }
-			
-			b_weimar = {}
-			b_jena = {}
-			b_walkenried = {}
-			b_nordhausen = {}
-			b_memelsen = {}
-			b_gotha = {}
-			b_apoldoa = {}
-			b_gera = {}
 		}
 	}
 	d_brandenburg = {
@@ -4741,7 +4553,153 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 			}
 		}
 	}		
+	d_artois = {
+		color = { 117 127 174 }
+		color2 = { 255 255 255 }
 		
+		culture = dutch
+		
+		capital = 77 #Artois
+		
+		allow = { 
+			is_adult = yes
+			has_regent = no
+			war = no
+		}
+		
+		c_artois = {
+			color = { 106 127 51 }
+			color2 = { 255 255 255 }
+			
+			b_arras = {
+				dutch = "Atrecht"
+				german = "Atrecht"		
+			}
+			b_terwaan = {}
+			b_bethune = {}
+			b_lens = {}
+			b_lille = {
+				dutch = "Rijsel"
+			}
+			b_bouvines = {}
+			b_beaumetz = {}
+			b_bapaume = {}
+		}	
+		c_boulogne = {
+			color = { 77 22 178 }
+			color2 = { 255 255 255 }
+			
+			dutch = "Bonen"
+			
+			b_boulogne = {
+				dutch = "Bonen"
+			}
+			b_saintpol = {}
+			b_hesdin = {}
+			b_fauquembergues = {}
+			b_ternouis = {}
+			b_therouanne = {}
+			b_ardres = {}
+		}	
+		c_guines = {
+			color = { 240 190 183 }
+			color2 = { 255 255 255 }
+			
+			dutch = "Giezene"
+			
+			b_guines = {
+				dutch = "Giezene"
+			}
+			b_saintomer = {}
+			b_calais = {}
+			b_dunkerque = {}
+			b_bourbourg = {}
+			b_marck = {}
+			b_gravelines = {}
+			b_coulogne = {}
+		}
+	}
+	d_flanders = {
+		color = { 240 167 130 }
+		color2 = { 48 48 48 }
+		
+		culture = dutch
+		
+		capital = 78 #Brugge
+		
+		allow = { 
+			is_adult = yes
+			has_regent = no
+			war = no
+		}
+		
+		c_yperen = {
+			color = { 127 152 36 }
+			color2 = { 255 255 255 }
+			
+			b_ypres = {}
+			b_rosebeke = {}
+			b_cassel = {}
+			b_roeselare = {}
+			b_poperinge = {}
+			b_menen = {}
+			b_diksmuide = {}
+			b_wervik = {}
+		}
+		c_brugge = {
+			color = { 184 50 173 }
+			color2 = { 255 255 255 }
+			
+			frankish = "Bruges"
+			
+			b_brugge = {
+				frankish = "Bruges"
+			}
+			b_damme = {}
+			b_sluys = {
+				frankish = "L'Ecluse"
+				norman = "L'Ecluse"
+				occitan = "L'Ecluse"
+			}
+			b_oostende = {}
+			b_male = {}
+			b_nieuwpoort = {}
+			b_torhout = {}
+			b_aardenburg = {}
+		}
+		c_gent = {
+			color = { 187 198 243 }
+			color2 = { 255 255 255 }
+			
+			b_gent = {}
+			b_doornik = {
+				frankish = "Tournai"
+				occitan = "Tournai"
+				norman = "Tornai"
+			}
+			b_oudenaarde = {}
+			b_aalst = {}
+			b_st_niklaas = {}
+			b_dendermonde = {}
+			b_kortrijk = {}
+			b_geraardsbergen = {}
+		}
+		c_hainaut = {
+			color = { 138 192 23 }
+			color2 = { 255 255 255 }
+		
+			b_valenciennes = {}
+			b_cambrai = {}
+			b_avesnes = {}
+			b_mons = {
+				dutch = "Bergen"
+			}
+			b_chievres = {}
+			b_enghien = {}
+			b_charleroi = {}
+			b_ath = {}
+		}
+	}
     d_burgundy = {
 		color = { 200 67 108 }
 		color2 = { 255 255 255 }
@@ -13137,6 +13095,31 @@ k_denmark = {
 			b_skive = {}
 			b_skagen = {}
 			b_jelling = {}
+		}
+		c_holstein = {
+			color = { 16 130 5 }
+			color2 = { 255 255 255 }
+			
+			danish = "Holsten"
+			swedish = "Holsten"
+			norwegian = "Holsten"
+			norse = "Holsten"
+			
+			b_kiel = {
+				norse = "Kíl"
+			}
+			b_gottorp = {}
+			b_itzehoe = {}
+			b_reinholdsburg = {}
+			b_elmshorn = {}
+			b_gluckstadt = {
+				danish = "Lykstad"
+				swedish = "Lyckstad"
+				norwegian = "Lykstad"
+				norse = "Lykstad"
+			}
+			b_lauenburg = {}
+			b_segeberg = {}
 		}
 	}
 }
@@ -23950,6 +23933,494 @@ k_egypt = {
 	}
 }
 
+k_ghana = {
+	color = { 199 103 13 }
+	color2 = { 65 130 36 }
+	capital = 913 #Ghana
+	culture = manden
+	west_african_pagan_reformed = 100
+	
+	allow = {
+		is_adult = yes
+		has_regent = no
+		war = no
+		ruled_years = 5
+		hidden_tooltip = {
+			OR = {
+				ai = no
+				NOT = {
+					has_landed_title = e_byzantium
+					top_liege = { has_landed_title = e_byzantium }
+				}
+			}
+		}
+		OR = {
+			AND = {
+				culture = manden
+				NOT = {
+					num_of_king_titles = 2
+				}
+			}
+			k_ghana = {
+				OR = {
+					is_titular = no
+					has_holder = yes
+				}
+			}
+		}
+	}
+	
+	d_kangaba = {
+		color = { 198 159 54 }
+		color2 = { 50 75 10 }
+		
+		capital = 913 #Ghana
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+			
+		c_bambuk = {
+			color = { 130 180 61 }
+			color2 = { 255 255 255 }
+		
+			b_bambuk = {}
+			b_kiffa = {}
+			b_kankossa = {}
+			b_boumdeid = {}
+			b_guerou = {}
+			b_aftout = {}
+		}
+		c_kirana = {
+			color = { 215 186 54 }
+			color2 = { 50 75 10 }
+			
+			b_kirana = {}
+			b_bafoulable = {}
+			b_diabougou = {}
+		}
+		c_yaresna = {
+			color = { 186 176 66 }
+			color2 = { 50 75 10 }
+			
+			b_yaresna = {}
+			b_kayes = {}
+			b_bangassi = {}
+		}			
+	}
+	d_diafanu = {
+		color = { 146 106 54 }
+		color2 = { 51 66 10 }
+		
+		capital = 912 #Aoudagast
+	
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+		
+		c_aoudagast = {
+			color = { 130 180 61 }
+			color2 = { 255 255 255 }
+		
+			b_aoudagast = {}
+			b_tichitt = {}
+			b_ksarelbarka = {}		
+		}
+		c_oualata = {
+			color = { 162 118 74 }
+			color2 = { 50 72 32 }
+			
+			b_oualata = {}
+			b_nema = {}
+			b_goumbou = {}
+		}
+		c_tagant = {
+			color = { 255 106 0 }
+			color2 = { 127 51 0 }
+			
+			b_rachid = {}
+			b_boumdeit = {}
+			b_serotandi = {}
+		}			
+	}
+	d_susu = {
+		color = { 213 94 26 }
+		color2 = { 68 164 51 }
+		
+		capital = 917 #Soumpi
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+
+		c_soumpi = {
+			color = { 161 90 21 }
+			color2 = { 50 75 10 }
+			
+			b_soumpi = {}
+			b_niafunke = {}
+			b_dianke = {}
+		}
+		c_niono = {
+			color = { 189 104 12 }
+			color2 = { 30 85 10 }
+			
+			b_niono = {}
+			b_kouyakoura = {}
+			b_nyemina = {}
+		}
+		c_araouane = {
+			color = { 186 120 54 }
+			color2 = { 50 75 10 }
+			
+			b_araouane = {}
+		}				
+	}
+	d_jeno = { #Southeast
+		color = { 198 165 24 }
+		color2 = { 61 75 10 }
+		
+		capital = 915 #Djenne
+			
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+		
+		c_djenne = {
+			color = { 162 136 54 }
+			color2 = { 50 75 10 }
+			
+			b_djenne = {} #North
+			b_macina = {}
+			b_fakala = {}
+			b_kewa = {}
+			b_femaye = {}
+		}
+		c_bamako = {
+			color = { 175 90 54 }
+			color2 = { 50 75 10 }
+			
+			b_bamakoa = {}
+			b_koro_koulikoro = {}
+			b_sema = {}
+			b_segou = {}
+		}
+		c_ghana = {
+			color = { 130 180 61 }
+			color2 = { 255 255 255 }
+			
+			b_el_ghaba = {}
+			b_koumbi_saleh = {}
+			b_silla = {}
+			b_singhanah = {}
+			b_samakanda = {}
+			b_ras_elma = {}
+			b_tirka = {}
+			b_kughah = {}
+		}
+	}			
+}
+
+k_jolof = {
+	color = { 251 163 38 }
+	color2 = { 185 48 15 }
+	
+	capital = 1455 #Cayor
+	culture = jolof
+
+	west_african_pagan_reformed = 100
+	
+	allow = { 
+		is_adult = yes
+		has_regent = no
+		war = no
+		ruled_years = 5
+		hidden_tooltip = {
+			OR = {
+				ai = no
+				NOT = {
+					has_landed_title = e_byzantium
+					top_liege = { has_landed_title = e_byzantium }
+				}
+			}
+		}
+		OR = {
+			AND = {
+				culture = jolof
+				NOT = {
+					num_of_king_titles = 2
+				}
+			}
+			k_jolof = {
+				OR = {
+					is_titular = no
+					has_holder = yes
+				}
+			}
+		}
+	}
+		
+	d_takrur = { #North
+		color = { 251 173 138 }
+		color2 = { 155 58 55 }
+		
+		capital = 1450 #Morfil
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+		
+		c_morfil = {
+			color = { 201 103 58 }
+			color2 = { 185 98 15 }
+			
+			b_morfil = {}
+			b_podor = {}
+			b_ngoui = {}
+			b_salde = {}
+		}
+		c_matam = {
+			color = { 221 163 8 }
+			color2 = { 145 68 35 }
+			
+			b_matam = {}
+			b_kaedi = {}
+			b_kanel = {}
+		}
+		c_tabacounda = {
+			color = { 219 178 93 }
+			color2 = { 148 71 36 }
+			
+			b_tabacounda = {}
+			b_bakel = {}
+			b_goudiry = {}
+		}
+		c_waalo = {
+			color = { 190 170 31 }
+			color2 = { 110 125 16 }
+			
+			b_ndiangue = {}
+			b_louga = {}
+			b_nder = {}
+		}
+		c_linguere = {
+			color = { 216 103 93 }
+			color2 = { 70 105 10 }
+			
+			b_linguere = {}
+			b_diourbel = {}
+			b_touba = {}
+		}
+	}
+	d_jolof = {
+		color = { 230 140 23 }
+		color2 = { 130 75 36 }
+		
+		capital = 1455 #Cayor
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+		
+		c_cayor = {
+			color = { 198 94 21 }
+			color2 = { 160 150 36 }
+			
+			b_mboul = {}
+			b_yoff = {}
+			b_thies = {}
+			b_nguekokh = {}
+		}
+		c_saloum = {
+			color = { 231 193 78 }
+			color2 = { 100 65 36 }
+			
+			b_kahone = {}
+			b_mbissel = {}
+			b_kaolack = {}
+		}
+		c_baol = {
+			color = { 210 172 98 }
+			color2 = { 100 16 3 }
+			
+			b_jurbel = {}
+			b_mbour = {}
+			b_bambey = {}
+		}
+		c_ziguincha = {
+			color = { 151 53 8 }
+			color2 = { 215 98 95 }
+			
+			b_ziguincha = {}
+			b_serekunda = {}
+			b_banjul = {}
+			b_brikama = {}
+		}
+	}
+}
+
+k_mali = {
+	color = { 186 120 74 }
+	color2 = { 75 50 10 }
+	
+	capital = 914 # Gao
+	culture = manden
+	
+	west_african_pagan_reformed = 100
+	
+	allow = {
+		is_adult = yes
+		has_regent = no
+		war = no
+		ruled_years = 5
+		hidden_tooltip = {
+			OR = {
+				ai = no
+				NOT = {
+					has_landed_title = e_byzantium
+					top_liege = { has_landed_title = e_byzantium }
+				}
+			}
+		}
+		OR = {
+			AND = {
+				culture = manden
+				NOT = {
+					num_of_king_titles = 2
+				}
+			}
+			k_mali = {
+				OR = {
+					is_titular = no
+					has_holder = yes
+				}
+			}
+		}
+	}	
+
+	d_songhay = {
+		color = { 136 90 74 }
+		color2 = { 75 50 10 }
+
+		capital = 914 # Gao
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+
+		c_gao = { #East
+			color = { 190 120 110 }
+			color2 = { 50 75 10 }
+			b_gao = {}
+			b_sarnah = {}
+			b_gaosaney = {}
+			b_bourem = {}
+			b_ansongo = {}
+			b_menaka = {}
+			b_gabero = {}
+			b_anchawadi = {}
+		}		
+		c_timbuktu = {
+			color = { 90 60 54 }
+			color2 = { 50 75 10 }
+		
+			b_timbuktu = {}
+			b_alafia = {}
+			b_salam = {
+				holy_site = west_african_pagan
+				holy_site = west_african_pagan_reformed			
+			}
+			b_lafia = {}
+			b_ber = {}
+			b_boureminaly = {}
+			b_toya = {}
+			b_aglal = {}
+		}		
+		c_tadmekka = {
+			color = { 110 70 54 }
+			color2 = { 50 75 10 }
+			
+			b_tadmekka = {}
+			b_agades = {}
+			b_takedda = {}
+			b_essako = {}
+			b_kidal = {}
+		}
+	}	
+	d_kumbee-tenga = {
+		color = { 112 75 13 }
+		color2 = { 50 75 10 }
+
+		capital = 925 # Mali
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+	
+		c_mali = {
+			color = { 148 192 13 }
+			color2 = { 50 75 10 }
+			
+			b_boure = {}
+			b_niani = {}
+			b_bamako = {
+				holy_site = west_african_pagan
+				holy_site = west_african_pagan_reformed
+			}
+			b_safo = {}
+			b_baguineda = {}
+			b_dialakoro = {}
+			b_bougouni = {}
+			b_soussa = {}
+		}
+		c_zarma = {
+			color = { 222 151 54 }
+			color2 = { 50 75 10 }
+			
+			b_bura = {}
+			b_ouallam = {}
+			b_tera = {}
+		}
+		c_bolgatanga = { #West
+			color = { 249 93 14 }
+			color2 = { 50 75 10 }
+			
+			b_bolgatanga = {}
+			b_nuarungu = {}
+			b_naa_bwewaa = {
+					#holy_site = west_african_pagan
+					#holy_site = west_african_pagan_reformed
+			}
+			b_tongo = {}
+			b_dinarha = {}
+		}			
+		c_gurma = {
+			color = { 130 180 61 }
+			color2 = { 255 255 255 }
+			
+			b_gurma = {}
+			b_zorgho = {}
+			b_hounde = {}
+		}		
+	}
+}
+
 k_mauretania = {
 	color = { 58 41 188 }
 	color2 = { 255 255 255 }
@@ -24002,7 +24473,32 @@ k_mauretania = {
 			has_regent = no
 			war = no
         }
-
+		c_ifni = {
+			color = { 221 147 229 }
+			color2 = { 255 255 255 }
+		
+			b_ifni = {}
+			b_tiznit = {}
+			b_ouaouteit = {}
+			b_rgab = {}
+			b_guelmim = {}
+			b_belkassem = {}
+			b_mihrleft = {}
+			b_tizgui = {}
+		}
+		c_tharasset = {
+			color = { 116 209 160 }
+			color2 = { 255 255 255 }
+		
+			b_tharasset = {}
+			b_tartaya = {}
+			b_tantan = {}
+			b_akhfennir = {}
+			b_chbika = {}
+			b_tidergit = {}
+			b_amot = {}
+			b_tiglit = {}
+		}		
 		c_canarias = {
 			color = { 243 108 15 }
 			color2 = { 255 255 255 }
@@ -24065,32 +24561,6 @@ k_mauretania = {
 				sicilian_arabic = "Kif"
 			}
 		}		
-		c_tharasset = {
-			color = { 116 209 160 }
-			color2 = { 255 255 255 }
-		
-			b_tharasset = {}
-			b_tartaya = {}
-			b_tantan = {}
-			b_akhfennir = {}
-			b_chbika = {}
-			b_tidergit = {}
-			b_amot = {}
-			b_tiglit = {}
-		}
-		c_ifni = {
-			color = { 221 147 229 }
-			color2 = { 255 255 255 }
-		
-			b_ifni = {}
-			b_tiznit = {}
-			b_ouaouteit = {}
-			b_rgab = {}
-			b_guelmim = {}
-			b_belkassem = {}
-			b_mihrleft = {}
-			b_tizgui = {}
-		}
 	}
 }
 
@@ -24560,7 +25030,3 @@ k_nubia = {
 		}
     }
 }
-
-
-
-# India

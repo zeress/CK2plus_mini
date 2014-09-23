@@ -2162,7 +2162,7 @@ k_germany = {
 		}
 	}
 	d_saxony = {
-		color = { 164 162 162 }
+		color = { 150 162 182 }
 		color2 = { 255 255 255 }
 		
 		capital = 310 #Anhalt
@@ -3030,8 +3030,10 @@ k_germany = {
 k_lotharingia = {
 	color = { 220 138 57 }
 	color2 = { 255 255 255 }
-	culture = german
+
 	capital = 117 #Brabant
+	
+	culture = frankish
 	
 	dignity = 9
 	catholic = 10 #Crusade target weight
@@ -5987,8 +5989,7 @@ k_burgundy = {
 	color = { 134 0 37 }
 	color2 = { 220 220 0 }
 	
-	capital	= 221 # Provence	
-	culture = occitan
+	capital	= 221 # Provence
 	
 	catholic = 100 # Crusade target weight
 	
@@ -8257,8 +8258,54 @@ k_italy = {
 			b_rusellae = {}
 		}
 	}
+}
+
+k_sardinia = {
+	color = { 170 200 170 }
+	color2 = { 255 255 255 }
+	
+	capital = 326 # Cagliari
+	
+	culture = italian
+	
+	catholic = 10 #Crusade target weight
+	hellenic_pagan = 5 #Crusade target weight
+	
+	allow = {
+		is_adult = yes
+		has_regent = no
+		war = no
+		ruled_years = 5
+		hidden_tooltip = {
+			OR = {
+				ai = no
+				NOT = {
+					has_landed_title = e_byzantium
+					top_liege = { has_landed_title = e_byzantium }
+				}
+			}
+		}
+		OR = {
+			AND = {
+				NOT = {
+					num_of_king_titles = 2
+				}
+				OR = {
+					culture_group = latin
+					culture_group = iberian
+				}
+			}
+			k_sardinia = {
+				OR = {
+					is_titular = no
+					has_holder = yes
+				}
+			}
+		}
+	}
+
 	d_sardinia = {
-		color = { 217 159 255 }
+		color = { 31 138 40 }
 		color2 = { 255 255 255 }
 		
 		capital = 326 # Cagliari
@@ -23985,7 +24032,21 @@ k_mauretania = {
 			has_regent = no
 			war = no
         }
-		c_ifni = {
+
+		c_tharasset = { # Tamdoult
+			color = { 116 209 160 }
+			color2 = { 255 255 255 }
+		
+			b_tharasset = {}
+			b_tartaya = {}
+			b_tantan = {}
+			b_akhfennir = {}
+			b_chbika = {}
+			b_tidergit = {}
+			b_amot = {}
+			b_tiglit = {}
+		}
+		c_ifni = { # Taroudant
 			color = { 221 147 229 }
 			color2 = { 255 255 255 }
 		
@@ -23998,19 +24059,6 @@ k_mauretania = {
 			b_mihrleft = {}
 			b_tizgui = {}
 		}
-		c_tharasset = {
-			color = { 116 209 160 }
-			color2 = { 255 255 255 }
-		
-			b_tharasset = {}
-			b_tartaya = {}
-			b_tantan = {}
-			b_akhfennir = {}
-			b_chbika = {}
-			b_tidergit = {}
-			b_amot = {}
-			b_tiglit = {}
-		}		
 		c_canarias = {
 			color = { 243 108 15 }
 			color2 = { 255 255 255 }
@@ -24294,45 +24342,6 @@ k_morocco = {
 			b_bechar = {}
 			b_boudnib = {}
 		}
-	}
-	d_taghaza = {
-		color = { 146 45 92 }
-		color2 = { 75 50 10 }
-		
-		capital = 916 #Taghaza
-		
-		allow = {
-			is_adult = yes
-			has_regent = no
-			war = no
-        }
-		
-		c_taghaza = {
-			color = { 110 60 64 }
-			color2 = { 255 255 255 }
-			
-			b_taghaza = {}
-			b_kerzaz = {}
-			b_metarta = {}
-			b_reggane = {}
-			b_adrar = {}
-			b_aougrout = {}
-			b_charouine = {}
-			b_alouarta = {}
-		}
-		c_sijilmasa = {
-			color = { 120 60 84 }
-			color2 = { 255 255 255 }
-			
-			b_sijilmasa = {}
-			b_merzouga = {}
-			b_tanamouste= {}
-			b_ertoud = {}
-			b_merzane = {}
-			b_hannabou = {}
-			b_tadaout = {}
-			b_tisserdmine = {}
-		}		
 	}
 }
 

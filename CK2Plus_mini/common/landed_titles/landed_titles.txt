@@ -21,7 +21,11 @@ k_england = {
 	
 	catholic = 10 #Crusade target weight
 	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	celtic_pagan_reformed = 50 # Crusade target weight
+	
+	welsh = "Lloegyr"
+	irish = "Sasana"
 	
 	allow = {
 		is_adult = yes
@@ -47,9 +51,7 @@ k_england = {
 					culture = saxon
 					culture = english
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_england = {
 				OR = {
@@ -153,7 +155,7 @@ k_england = {
 		
 		capital = 52 # Northumberland
 		
-		saxon = "Norþhymbraland"
+		saxon = "Norþhymbria"
 		norse = "Norþhymbraland"
 		english_norse = "Norþhymbraland"
 		swedish = "Norþhymbraland"
@@ -184,7 +186,7 @@ k_england = {
 			color = { 200 130 209 }
 			color2 = { 255 255 255 }
 			
-			saxon = "Norþhymbraland"
+			saxon = "Norþhymbria"
 			norse = "Norþhymbraland"
 			english_norse = "Norþhymbraland"
 			swedish = "Norþhymbraland"
@@ -977,7 +979,11 @@ k_englandnorman = { #England of William the Conqueror
 	
 	catholic = 10 #Crusade target weight
 	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	celtic_pagan_reformed = 50 # Crusade target weight
+	
+	welsh = "Lloegyr"
+	irish = "Sasana"
 	
 	allow = {
 		is_adult = yes
@@ -1001,9 +1007,7 @@ k_englandnorman = { #England of William the Conqueror
 					culture = frankish
 					culture = english
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_englandnorman = {
 				OR = {
@@ -1023,7 +1027,11 @@ k_englandnorwegian = { #England of Harald the Conqueror
 	
 	catholic = 10 #Crusade target weight
 	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	celtic_pagan_reformed = 50 #Crusade target weight
+	
+	welsh = "Lloegyr"
+	irish = "Sasana"
 	
 	allow = {
 		is_adult = yes
@@ -1047,9 +1055,7 @@ k_englandnorwegian = { #England of Harald the Conqueror
 					culture = english_norse
 					culture = english
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_englandnorwegian = {
 				OR = {
@@ -1074,6 +1080,7 @@ k_bohemia = {
 	baltic_pagan_reformed = 1 # Crusade target weight
 	
 	allow = {
+		k_moravia = { has_holder = no }
 		is_adult = yes
 		has_regent = no
 		war = no
@@ -1090,9 +1097,7 @@ k_bohemia = {
 		OR = {
 			AND = {
 				culture = bohemian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_bohemia = {
 				OR = {
@@ -1341,7 +1346,7 @@ k_bohemia = {
 }
 
 k_carpathia = {
-	color = { 187 70 70 }
+	color = { 215 192 149 }
 	color2 = { 255 255 255 }
 	
 	capital = 444 # Esztergom
@@ -1374,9 +1379,7 @@ k_carpathia = {
 		OR = {
 			AND = {
 				culture = hungarian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_carpathia = {
 				OR = {
@@ -1895,7 +1898,8 @@ k_frisia = {
 	capital = 84 #Frisia
 	
 	catholic = 700 # Crusade target weight
-	norse_pagan_reformed = 200 # Crusade target weight
+	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	
 	german = "Friesland"
 	dutch = "Friesland"
@@ -1917,9 +1921,7 @@ k_frisia = {
 		OR = {
 			AND = {
 				culture = dutch
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_frisia = {
 				OR = {
@@ -1974,7 +1976,12 @@ k_frisia = {
 			color2 = { 255 255 255 }
 		
 			b_middelburg = {}
-			b_tholen = {}
+			b_tholen = {
+				holy_site = norse_pagan
+				holy_site = norse_pagan_reformed
+				holy_site = german_pagan
+				holy_site = german_pagan_reformed
+			}
 			b_veere = {}
 			b_cadzand = {}
 			b_vlissingen = {}
@@ -2124,6 +2131,7 @@ k_germany = {
 	dignity = 10 # Counted as having this many more counties than it does	
 	catholic = 10 # Crusade target weight
 	norse_pagan_reformed = 10 # Crusade target weight
+	german_pagan_reformed = 200 # Crusade target weight
 	slavic_pagan_reformed = 10 # Crusade target weight
 	baltic_pagan_reformed = 1 # Crusade target weight
 	
@@ -2153,9 +2161,7 @@ k_germany = {
 					culture = german
 					culture = frankish
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_germany = {
 				OR = {
@@ -2376,25 +2382,14 @@ k_germany = {
 			b_paderborn = {
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
+				holy_site = german_pagan
+				holy_site = german_pagan_reformed
 			}
 			b_hildesheim = {}
 			b_waldeck = {}
 			b_wolfenbuttel = {}
 			b_helmstedt = {}
 			b_gandersheim = {}
-		}
-		c_gottingen = {
-			color = { 231 59 117 }
-			color2 = { 255 255 255 }
-			
-			b_gottingen = {}
-			b_corvey = {}
-			b_lippe = {}
-			b_kassel = {}
-			b_goslar = {}
-			b_northeim = {}
-			b_eisenach = {}
-			b_detmold = {}
 		}
 		c_hamburg = {
 			color = { 181 161 34 }
@@ -2538,6 +2533,19 @@ k_germany = {
 			b_hersfeld = {}
 			b_falkenstein = {}
 			b_isenburg = {}
+		}
+		c_gottingen = {
+			color = { 231 59 117 }
+			color2 = { 255 255 255 }
+			
+			b_gottingen = {}
+			b_corvey = {}
+			b_lippe = {}
+			b_kassel = {}
+			b_goslar = {}
+			b_northeim = {}
+			b_eisenach = {}
+			b_detmold = {}
 		}
 	}
 	d_koln = {
@@ -3066,9 +3074,7 @@ k_lotharingia = {
 					culture = german
 					culture = frankish
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_lotharingia = {
 				OR = {
@@ -3419,9 +3425,7 @@ k_poland = {
 		OR = {
 			AND = {
 				culture = polish
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_poland = {
 				OR = {
@@ -3993,6 +3997,7 @@ k_pomerania = {
 	catholic = 400 # Crusade target weight
 	slavic_pagan_reformed = 500 # Crusade target weight
 	norse_pagan_reformed = 100 # Crusade target weight
+	german_pagan_reformed = 100 # Crusade target weight
 	baltic_pagan_reformed = 100 # Crusade target weight
 	
 	allow = {
@@ -4015,9 +4020,7 @@ k_pomerania = {
 					culture = pommeranian
 					religion_group = pagan_group
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_pomerania = {
 				OR = {
@@ -4175,7 +4178,7 @@ k_pomerania = {
 		
 		capital = 260 #mecklemburg
 		
-		pommeranian = Weligrad
+		pommeranian = Obotritia
 		
 		allow = {
 			is_adult = yes
@@ -4367,7 +4370,7 @@ k_pomerania = {
 		
 		capital = 365 #Brandenburg
 
-		pommeranian = Brennaburg
+		pommeranian = "Sorbia"
 		
 		allow = {
 			is_adult = yes
@@ -4528,6 +4531,7 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 	
 	catholic = 100 #Crusade target weight
 	norse_pagan_reformed = 10 # Crusade target weight
+	german_pagan_reformed = 10 # Crusade target weight
 	celtic_pagan_reformed = 30 # Crusade target weight
 	
 	allow = {
@@ -4547,9 +4551,7 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 		OR = {
 			AND = {
 				culture = frankish
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_france = {
 				OR = {
@@ -5241,9 +5243,7 @@ k_aquitaine = {
 		OR = {
 			AND = {
 				culture = occitan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_aquitaine = {
 				OR = {
@@ -5753,6 +5753,9 @@ k_brittany = {
 	celtic_pagan_reformed = 30
 	
 	norse = "Bertangaland"
+	welsh = "Arymôr"
+	irish = "Bhriotáin"
+	frankish = "Bretagne"
 	
 	allow = {
 		is_adult = yes
@@ -5772,9 +5775,7 @@ k_brittany = {
 			AND = {
 				culture = breton
 				has_landed_title = d_brittany
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_brittany = {
 				OR = {
@@ -5793,6 +5794,10 @@ k_brittany = {
 		culture = breton
 		
 		norse = "Bertangaland"
+		breton = "Breizh"
+		welsh = "Llydaw"
+		irish = "Briotáine"
+		frankish = "Bretagne"
 		
 		allow = {
 			is_adult = yes
@@ -5833,10 +5838,12 @@ k_brittany = {
 			color = { 89 32 196 }
 			color2 = { 255 255 255 }
 			
-			breton = "Gwened"
+			breton = "Broërec"
+			welsh = "Guened"
 			
 			b_vannes = {
 				breton = "Gwened"
+				welsh = "Guened"
 			}
 			b_st_gildas = {
 				breton = "Lokentaz"
@@ -6019,9 +6026,7 @@ k_burgundy = {
 					culture = occitan
 					culture = frankish
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_burgundy = {
 				OR = {
@@ -6323,9 +6328,7 @@ k_bulgaria = {
 		OR = {
 			AND = {
 				culture = bulgarian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_bulgaria = {
 				OR = {
@@ -6392,6 +6395,7 @@ k_bulgaria = {
 		color2 = { 255 255 255 }
 		
 		capital = 499 # Tyrnovo
+		ilmenian = "Dregovichia"
 		
         allow = {
 			is_adult = yes
@@ -6565,9 +6569,7 @@ k_byzantium = {
 		OR = {
 			AND = {
 				culture = greek
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_byzantium = {
 				OR = {
@@ -6694,6 +6696,7 @@ k_byzantium = {
 			
 			b_gallipoli = {
 				turkish = "Gelibolu"
+				greek = "Kallipolis"
 			}
 			b_heraclea = {}
 			b_madyta = {}
@@ -6918,7 +6921,9 @@ k_byzantium = {
 			color2 = { 255 255 20 }
 			
 			italian = "Durazzo"
-			
+			serbian = "Ohrid"
+			bulgarian = "Ohrid"
+
 			b_durazzo = {
 				greek = "Dyrrhachion"
 				italian = "Durazzo"
@@ -7217,8 +7222,11 @@ k_byzantium = {
 			color = { 114 125 63 }
 			color2 = { 255 255 20 }
 			
+			greek = Gortyn
+			italian = Gortyn
+			
 			b_iraklio = {
-				greek = "Megalokastron"
+				greek = "Gortyn"
 				italian = "Candia"
 				turkish = "Kandiye"
 				maghreb_arabic = "Khandaq"
@@ -7315,9 +7323,7 @@ k_croatia = {
 		OR = {
 			AND = {
 				culture = croatian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_croatia = {
 				OR = {
@@ -7575,9 +7581,7 @@ k_italy = {
 		OR = {
 			AND = {
 				culture = italian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_italy = {
 				OR = {
@@ -8293,9 +8297,7 @@ k_sardinia = {
 		}
 		OR = {
 			AND = {
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 				OR = {
 					culture_group = latin
 					culture_group = iberian
@@ -8403,9 +8405,7 @@ k_serbia = {
 		OR = {
 			AND = {
 				culture = serbian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_serbia = {
 				OR = {
@@ -8635,9 +8635,7 @@ k_sicily = {
 					culture = sicilian_greek
 					culture = sicilian_arabic
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_sicily = {
 				OR = {
@@ -9168,9 +9166,7 @@ k_venice = {
 		OR = {
 			AND = {
 				culture = italian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_venice = {
 				OR = {
@@ -9248,9 +9244,7 @@ k_wallachia = {
 		OR = {
 			AND = {
 				culture = romanian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_wallachia = {
 				OR = {
@@ -9440,9 +9434,7 @@ k_alania = {
 		OR = {
 			AND = {
 				culture = alan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_alania = {
 				OR = {
@@ -9627,9 +9619,7 @@ k_crimea = {
 					culture_group = byzantine
 					culture_group = latin
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
             k_crimea = {
                 OR = {
@@ -9865,9 +9855,7 @@ k_cuman = {
 		OR = {
 			AND = {
 				culture = cuman
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_cuman = {
 				OR = {
@@ -9948,6 +9936,7 @@ k_cuman = {
 		color2 = { 255 255 255 }
 		
 		capital = 620 # Itil
+		pecheneg = "Pecheneg"
 		
 		allow = {
 			is_adult = yes
@@ -9958,8 +9947,11 @@ k_cuman = {
 		c_itil = {
 			color = { 159 176 242 }
 			color2 = { 255 255 255 }
+			pecheneg = "Pecheneg"
 		
-			b_itil = {}
+			b_itil = {
+				pecheneg = "Pecheneg"
+			}
 			b_khaganbaligh = {}
 			b_saqsin = {
 				holy_site = tengri_pagan
@@ -9995,20 +9987,6 @@ k_cuman = {
 			has_regent = no
 			war = no
         }
-	
-		c_khopyor = {
-			color = { 217 168 150 }
-			color2 = { 255 255 255 }
-		
-			b_khopyorsk = {}
-			b_borisoglebsk = {}
-			b_tambov = {} 
-			b_uryupin = {}
-			b_balashov = {}
-			b_kirsanov = {}
-			b_ustmedveditskaya = {}
-			b_uvarovo = {}
-		}
 		c_sugrov = {
 			color = { 47 69 164 }
 			color2 = { 255 255 255 }
@@ -10356,9 +10334,7 @@ k_lithuania = {
 		OR = {
 			AND = {
 				culture = lithuanian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_lithuania = {
 				OR = {
@@ -10401,40 +10377,43 @@ k_lithuania = {
 			color = { 200 119 170 }
 			color2 = { 255 255 255 }
 			
-			swedish = "Lettgallen"
-			norse = "Lettgallen"
-			danish = "Lettgallen"
-			norwegian = "Lettgallen"
-			german = "Lettgallen"
-			lithuanian = "Latgala"
-			lettigallish = "Latgalisi"
-		
-			b_jersika = {}
-			b_erle = {}
-			b_kreuzburg = {
-				lettigallish = "Cruczeborch"
-				lithuanian = "Cruczeborch"
-			}
-			b_kokenhusen = {}
-			b_dungada = {}
-			b_dignaja = {}
-			b_linewerd = {}
-			b_landau = {}
-		}
-		c_livs = {
-			color = { 106 202 239 }
-			color2 = { 255 255 255 }
-			
 			swedish = "Livland"
 			norse = "Livland"
 			danish = "Livland"
 			norwegian = "Livland"
 			german = "Livland"
 
+			b_gaujiena = {
+				ugricbaltic = "Atsela"
+				german = "Adsel"
+				lithuanian = "Atzeles"
+			}
+			b_kokenois = {
+				ugricbaltic = "Koknese"
+				german = "Kokenhusen"
+				polish = "Koknese"
+				lithuanian = "Koknese"
+			}
+			b_uxkull = { # Ikskila
+				swedish = "Yxkull"
+				norse = "Yxkull"
+				danish = "Yxkull"
+				norwegian = "Yxkull"
+				german = "Üxküll"
+				ugricbaltic = "Ikškila"
+				polish = "Ikškile"
+				lithuanian = "Ikškile"
+			}
 			b_wenden = {
-				lettigallish = "Venden"
-				lithuanian = "Venden"
-				ugricbaltic = "Võnnnu"
+				ugricbaltic = "Võnnu"
+				polish = "Kies"
+				lithuanian = "Cesys"
+			}
+			b_wolmer = {
+				ugricbaltic = "Valmiera"
+				german = "Wolmar"
+				polish = "Valmiera"
+				lithuanian = "Valmiera"
 			}
 			b_lemisele = {
 				swedish = "Lemsal"
@@ -10442,18 +10421,40 @@ k_lithuania = {
 				danish = "Lemsal"
 				norwegian = "Lemsal"
 				german = "Lemsal"
+				ugricbaltic = "Lemsalu"
+				polish = "Limbaži"
+				lithuanian = "Limbažiai"
 			}
-			b_uxkull = { # Ikskila
-				swedish = "Yxkull"
-				norse = "Yxkull"
-				danish = "Yxkull"
-				norwegian = "Yxkull"
+			b_seswegen = {
+				ugricbaltic = "Cesvaine"
+				german = "Sesswegen"
+				polish = "Cesvaine"
+				lithuanian = "Cesvaine"
 			}
-			b_cesis = {}
+		}
+		c_livs = {
+			color = { 106 202 239 }
+			color2 = { 255 255 255 }
+
+			swedish = "Lääne"
+			danish = "Lääne"
+			
 			b_salaspils = {}
-			b_kokenois = {}
-			b_seswegen = {}
-			b_wolmer = {}
+			b_haapsalu = {}
+			b_lihula = {
+				german = Leal
+			}
+			b_parnu = {
+				ugricbaltic = Pärnu
+				german = Pernau
+				polish = Parnawa
+				lithuanian = Pernu
+			}
+			b_martna = {}
+			b_kullamaa = {}
+			b_karuse = {}
+			b_pooravere = {}
+			b_piirsalu = {}
 		}
 		c_dorpat = {
 			color = { 87 94 199 }
@@ -10523,9 +10524,10 @@ k_lithuania = {
 	d_prussia = {
 		color = { 200 100 100 }
 		color2 = { 255 255 255 }
-		
 		capital = 370 # Marienburg
 		
+		prussian = "Pruthenia"
+		lettigallish = "Pruthenia"
 		lithuanian = "Prusija"
 		polish = "Prusy"
 		danish = "Prøjsen"
@@ -10725,12 +10727,21 @@ k_lithuania = {
 			color = { 30 170 241 }
 			color2 = { 255 255 255 }
 			
-			german = "Düna"
-			swedish = "Dyna"
-			norse = "Dyna"
-			danish = "Dyna"
-			norwegian = "Dyna"
+			swedish = "Lettgallen"
+			norse = "Lettgallen"
+			danish = "Lettgallen"
+			norwegian = "Lettgallen"
+			german = "Lettgallen"
 		
+			b_erle = {}
+			b_jersika = {
+				german = "Gerzika"
+			}
+			b_kreuzburg = {
+				ugricbaltic = "Krustpilsi"
+				polish = "Krzyzbork"
+				lithuanian = "Krustpils"
+			}
 			b_daugavpils = {
 				german = "Dünaburg"
 				swedish = "Dynaborg"
@@ -10739,14 +10750,29 @@ k_lithuania = {
 				norwegian = "Dynaborg"
 				finnish = "Väinänlinna"
 				russian = "Dvinsk"
+				ugricbaltic = "Väinalinn"
+				polish = "Dyneburg"
+				lithuanian = "Daugpilis"
 			}
-			b_balvi = {}
-			b_rezekne = {}
-			b_kraslava = {}
-			b_vilaka = {}
-			b_varakjani = {}
-			b_ludza = {}
-			b_vilani = {}
+			b_balvi = {
+				lithuanian = "Balvai"
+			}
+			b_rezekne = {
+				polish = "Rzezyca"
+			}
+			b_kraslava = {
+				polish = "Kraslaw"
+			}
+			b_vilaka = {
+				lithuanian = "Viliaka"
+			}
+			b_varakjani = {
+				ugricbaltic = "Varaklani"
+				german = "Varaklani"
+			}
+			b_ludza = {
+				polish = "Lucyn"
+			}
 		}
 	}
 	d_lithuanians = {
@@ -10837,7 +10863,7 @@ k_lithuania = {
 			b_gailen = {}
 		}
 	}
-	d_grodno = {
+	d_yatviags = {
 		color = { 246 113 113 }
 		color2 = { 255 255 255 }
 		
@@ -10896,6 +10922,9 @@ k_lithuania = {
 		norse = "Kurland"
 		danish = "Kurland"
 		norwegian = "Kurland"
+		lettigallish = "Curonia"
+		lithuanian = "Curonia"
+		prussian = "Curonia"
 		
         allow = {
 			is_adult = yes
@@ -10944,6 +10973,7 @@ k_lithuania = {
 			b_megava = {}
 			b_bandava = {}
 			b_ceklis = {}
+			b_dungada = {}
 		}
 	}
 	d_samogitia = {
@@ -11052,7 +11082,6 @@ k_muscovy = {
 	color2 = { 255 255 255 }
 	
 	capital = 575 #Moskva
-	culture = russian
 	
 	slavic_pagan_reformed = 50 # Crusade target weight
 	baltic_pagan_reformed = 10 # Crusade target weight
@@ -11084,9 +11113,7 @@ k_muscovy = {
 					culture_group = north_germanic
 					culture_group = east_slavic
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_muscovy = {
 				OR = {
@@ -11101,6 +11128,8 @@ k_muscovy = {
 		color = { 210 106 47 }
 		color2 = { 255 255 255 }
 		capital = 417 # Vitebsk
+		
+		ilmenian = "Kryvia"
 		
         allow = {
 			is_adult = yes
@@ -11158,6 +11187,8 @@ k_muscovy = {
 		danish = "Smaleskja"
 		norwegian = "Smaleskja"
 		norse = "Smaleskja"
+		severian = "Radimichia"
+		ilmenian = "Radimichia"
 		
         allow = {
 			is_adult = yes
@@ -11173,12 +11204,16 @@ k_muscovy = {
 			norse = "Smaleskja"
 			danish = "Smaleskja"
 			norwegian = "Smaleskja"
+			severian = "Radimichia"
+			ilmenian = "Radimichia"
 				
 			b_smolensk = {
 				swedish = "Smaleskja"
 				norse = "Smaleskja"
 				danish = "Smaleskja"
 				norwegian = "Smaleskja"
+				severian = "Radimichia"
+				ilmenian = "Radimichia"
 			}
 			b_velizh = {}
 			b_demidov = {}
@@ -11220,8 +11255,10 @@ k_muscovy = {
 	d_tver = {
 		color = { 211 207 173 }
 		color2 = { 255 255 255 }
-		
 		capital = 570 # Tver
+		
+		ilmenian = "Vyatich"
+		severian = "Vyatich"
 		
         allow = {
 			is_adult = yes
@@ -11259,6 +11296,7 @@ k_muscovy = {
 		color2 = { 255 255 255 }
 		
 		capital = 575 # Moskva
+		mordvin = "Mochkava"
 		
         allow = {
 			is_adult = yes
@@ -11293,8 +11331,10 @@ k_muscovy = {
 		c_moskva = {
 			color = { 189 63 27 }
 			color2 = { 255 255 255 }
-			
-			b_moskva = {}
+			mordvin = "Mochkava"
+			b_moskva = {
+				mordvin = "Mochkava"
+			}
 			b_rogozhi = {}
 			b_kaluga = {}
 			b_serpukhov = {}
@@ -11309,6 +11349,8 @@ k_muscovy = {
 		color2 = { 255 255 255 }
 		
 		capital = 582 # Vladimir
+		mordvin = "Murom"
+		samoyed = "Murom"
 		
         allow = {
 			is_adult = yes
@@ -11447,6 +11489,7 @@ k_muscovy = {
 		color2 = { 255 255 255 }
 		
 		capital = 580 # Ryazan
+		mordvin = "Meshchera"
 		
         allow = {
 			is_adult = yes
@@ -11560,9 +11603,7 @@ k_novgorod = {
 					culture_group = east_slavic
 					culture_group = finno_ugric
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_novgorod = {
 				OR = {
@@ -11679,19 +11720,6 @@ k_novgorod = {
 			b_veldvor = {}
 			b_zaytsevo = {}
 		}
-		c_vologda = {
-			color = { 160 86 220 }
-			color2 = { 255 255 255 }
-				
-			b_vologda = {}
-			b_kadnikovskaya = {}
-			b_sokol = {}
-			b_uste = {}
-			b_bolshayamurga = {}
-			b_dvinitsa = {}
-			b_motyn = {}
-			b_staroye = {}
-		}
 	}
 	d_novgorod = {
 		color = { 107 164 64 }
@@ -11702,6 +11730,15 @@ k_novgorod = {
 		norse = "Holmgård"
 		danish = "Holmgård"
 		norwegian = "Holmgård"
+		ilmenian = "Ilmen"
+		severian = "Ilmen"
+		mordvin = "Ilmen"
+		samoyed = "Ilmen"
+		finnish = "Ilmen"
+		lappish = "Ilmen"
+		ugricbaltic = "Ilmen"
+		komi = "Ilmen"
+		khanty = "Ilmen"
 		
 		pagan_coa = {
 			template = 0
@@ -11899,6 +11936,12 @@ k_novgorod = {
 		color2 = { 255 255 255 }
 		
 		capital = 572 # Yaroslavl
+		finnish = "Merya"
+		lappish = "Merya"
+		ugricbaltic = "Merya"
+		komi = "Merya"
+		samoyed = "Merya"
+		mordvin = "Merya"
 		
         allow = {
 			is_adult = yes
@@ -11944,6 +11987,19 @@ k_novgorod = {
 			b_putyatino = {}
 			b_volgostroy = {}
 		}
+		c_vologda = {
+			color = { 160 86 220 }
+			color2 = { 255 255 255 }
+				
+			b_vologda = {}
+			b_kadnikovskaya = {}
+			b_sokol = {}
+			b_uste = {}
+			b_bolshayamurga = {}
+			b_dvinitsa = {}
+			b_motyn = {}
+			b_staroye = {}
+		}
 	}
 }
 
@@ -11974,9 +12030,7 @@ k_perm = {
 		OR = {
 			AND = {
 				culture_group = finno_ugric
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_perm = {
 				OR = {
@@ -12052,19 +12106,6 @@ k_perm = {
 			war = no
         }
 		
-		c_hlynov = {
-			color = { 87 74 134 }
-			color2 = { 255 255 255 }
-			
-			b_hlynov = {}
-			b_egra = {}
-			b_glazkar = {}
-			b_izkar = {}
-			b_kambarka = {}
-			b_sarapul = {}
-			b_mozjga = {}
-			b_wotka = {}
-		}
 		c_zyriane = {
 			color = { 87 181 210 }
 			color2 = { 255 255 255 }
@@ -12564,6 +12605,9 @@ k_rus = {
 		color2 = { 255 255 255 }
 		
 		capital = 554 # Chernigov
+		severian = "Severia"
+		ilmenian = "Severia"
+		mordvin = "Severia"
 		
         allow = {
 			is_adult = yes
@@ -12658,9 +12702,7 @@ k_volga = {
 		OR = {
 			AND = {
 				culture_group = altaic
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_volga = {
 				OR = {
@@ -12671,30 +12713,17 @@ k_volga = {
 		}
 	}
 
-    d_chuvash = {
+    d_maris = {
 		color = { 137 27 166 }
 		color2 = { 255 255 255 }
 		
-		capital = 590 #Chuvash
+		capital = 588 #Mari
 		
 		allow = {
 			is_adult = yes
 			has_regent = no
 			war = no
         }
-		
-		c_grassland_cheremisa = { # Kerzhenets
-			color = { 172 56 133 }
-			color2 = { 255 255 255 }
-		
-			b_yarcalli = {}
-			b_zay = {}
-			b_cistay = {}
-			b_aznaqay = {}
-			b_bua = {}
-			b_bawli = {}
-			b_alabuga = {}
-		}
 		c_merya = { # Actually Mari
 			color = { 201 67 222 }
 			color2 = { 255 255 255 }
@@ -12708,21 +12737,22 @@ k_volga = {
 			b_mariturek = {}
 			b_morki = {}
 		}
-		c_chuvash = {
-			color = { 124 74 242 }
+		c_hlynov = {
+			color = { 87 74 134 }
 			color2 = { 255 255 255 }
-		
-			b_vedasuvar = {}
-			b_makaryevo = {}
-			b_cheboksary = {}
-			b_kozlovka = {}
-			b_sundyr = {}
-			b_tsivilsk = {}
-			b_yadrin = {}
+			
+			b_hlynov = {}
+			b_egra = {}
+			b_glazkar = {}
+			b_izkar = {}
+			b_kambarka = {}
+			b_sarapul = {}
+			b_mozjga = {}
+			b_wotka = {}
 		}
 	}
 	d_bulgar = { 
-		color = { 193 158 63 }
+		color = { 79 109 109 }
 		color2 = { 255 255 255 }
 		
 		capital = 610 # Bulgar
@@ -12795,11 +12825,13 @@ k_volga = {
 			b_kanash = {}
 		}
 	}
-	d_cheremisa = { 
-		color = { 225 165 4 }
-		color2 = { 255 255 255 }
+	d_mordvins = {
+		color = { 173 158 55 }
 		
-		capital = 591 # Cheremisa
+		culture = mordvin
+		komi = "Moksha"	
+		capital = 591 # Cheremisa	
+		# 
 		
 		allow = {
 			is_adult = yes
@@ -12807,18 +12839,18 @@ k_volga = {
 			war = no
         }
 		
-		c_mountain_cheremisa = { # Cheremisa
-			color = { 48 220 210 }
+		c_mordva = {
+			color = { 191 113 36 }
 			color2 = { 255 255 255 }
 		
-			b_simbirsk = {}
-			b_kanadey = {}
-			b_pokrovskoye = {}
-			b_stanichnaya = {}
-			b_melekess = {}
-			b_butyrskaya = {}
-			b_vybornaya = {}
-			b_barysh = {}
+			b_saransk = {}
+			b_insar = {}
+			b_temnikow = {}
+			b_ardatovo = {}
+			b_krasnoslobodsk = {}
+			b_yalga = {}
+			b_penza = {}
+			b_yavas = {}
 		}
 		c_burtasy = {
 			color = { 165 210 18 }
@@ -12833,18 +12865,67 @@ k_volga = {
 			b_golykaramysh = {}
 			b_rtishchevo = {}
 		}
-		c_mordva = {
-			color = { 191 113 36 }
+		c_khopyor = {
+			color = { 217 168 150 }
 			color2 = { 255 255 255 }
 		
-			b_saransk = {}
-			b_insar = {}
-			b_temnikow = {}
-			b_ardatovo = {}
-			b_krasnoslobodsk = {}
-			b_yalga = {}
-			b_penza = {}
-			b_yavas = {}
+			b_khopyorsk = {}
+			b_borisoglebsk = {}
+			b_tambov = {} 
+			b_uryupin = {}
+			b_balashov = {}
+			b_kirsanov = {}
+			b_ustmedveditskaya = {}
+			b_uvarovo = {}
+		}
+	}
+	d_cheremisa = { 
+		color = { 225 165 4 }
+		color2 = { 255 255 255 }
+		
+		capital = 591 # Cheremisa
+		
+		allow = {
+			is_adult = yes
+			has_regent = no
+			war = no
+        }
+		c_grassland_cheremisa = { # Kerzhenets
+			color = { 172 56 133 }
+			color2 = { 255 255 255 }
+		
+			b_yarcalli = {}
+			b_zay = {}
+			b_cistay = {}
+			b_aznaqay = {}
+			b_bua = {}
+			b_bawli = {}
+			b_alabuga = {}
+		}
+		c_mountain_cheremisa = { # Cheremisa
+			color = { 48 220 210 }
+			color2 = { 255 255 255 }
+		
+			b_simbirsk = {}
+			b_kanadey = {}
+			b_pokrovskoye = {}
+			b_stanichnaya = {}
+			b_melekess = {}
+			b_butyrskaya = {}
+			b_vybornaya = {}
+			b_barysh = {}
+		}
+		c_chuvash = {
+			color = { 124 74 242 }
+			color2 = { 255 255 255 }
+		
+			b_vedasuvar = {}
+			b_makaryevo = {}
+			b_cheboksary = {}
+			b_kozlovka = {}
+			b_sundyr = {}
+			b_tsivilsk = {}
+			b_yadrin = {}
 		}
 	}
 }
@@ -12865,6 +12946,7 @@ k_denmark = {
 	catholic = 10 #Crusade target weight
 	baltic_pagan_reformed = 5 # Crusade target weight
 	norse_pagan_reformed = 10 # Crusade target weight
+	german_pagan_reformed = 10 # Crusade target weight
 	
 	pommeranian = "Danska"
 	finnish = "Juutinmaa"
@@ -12890,9 +12972,7 @@ k_denmark = {
 					culture = danish
 					culture = norse
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_denmark = {
 				OR = {
@@ -13046,7 +13126,9 @@ k_denmark = {
 			b_lejre = {
 				norse = Hleiðra
 				holy_site = norse_pagan
-				holy_site = norse_pagan_reformed		
+				holy_site = norse_pagan_reformed	
+				holy_site = german_pagan
+				holy_site = german_pagan_reformed
 			}
 		}
 		c_fyn = {
@@ -13183,7 +13265,7 @@ k_north_sea = {
 
 	catholic = 10 #Crusade target weight
 	finnish_pagan_reformed = 5
-	norse_pagan_reformed = 100 # Crusade target weight
+	norse_pagan_reformed = 200 # Crusade target weight
 	
 	culture = norse
 	capital = 36 #Orkney
@@ -13216,9 +13298,7 @@ k_north_sea = {
 					culture_group = west_germanic
 					culture_group = celtic
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_north_sea = {
 				OR = {
@@ -13272,10 +13352,7 @@ k_north_sea = {
 			b_saudarkrokur = {}
 			b_skagafjordur = {}
 			b_hunapingvestra = {}
-			b_holar = {
-				holy_site = norse_pagan
-				holy_site = norse_pagan_reformed
-			}
+			b_holar = {}
 		}
 		c_nordulandeystra = {
 			color = { 0 90 214 }
@@ -13309,6 +13386,9 @@ k_north_sea = {
 		norwegian = "Nordeyjar"
 		swedish = "Nordeyjar"
 		danish = "Nordeyjar"
+		pictish = "Insee Galeth"
+		welsh = "Ynysoedd Gogledd"
+		irish = "Innse Tuath"
 		
         allow = {
 			is_adult = yes
@@ -13320,14 +13400,50 @@ k_north_sea = {
 			color = { 25 87 103 }
 			color2 = { 255 255 255 }
 			
-			b_skansin = {}
-			b_torshavn = {}
-			b_kirkjubour = {}
-			b_funningur = {}
-			b_kvivik = {}
-			b_sandur = {}
-			b_klaksvik = {}
-			b_hov = {}
+			pictish = "Caliu"
+			welsh = "Ynysoedd Ceiliau"
+			irish = "Innse Caora"
+			
+			b_skansin = {
+				pictish = "Lam"
+				welsh = "Llam"
+				irish = "Leum"
+			}
+			b_torshavn = {
+				pictish = "Pirth Taran"
+				welsh = "Porth Taran"
+				irish = "Port Turenn"
+			}
+			b_kirkjubour = {
+				pictish = "Tathinauu"
+				welsh = "Tyddynaueglwys"
+				irish = "Tuathanaseaglais"
+			}
+			b_funningur = {
+				pictish = "Uenaeth"
+				welsh = "Gwynaidd"
+				irish = "Fionnach"
+			}
+			b_kvivik = {
+				pictish = "Culbachuu"
+				welsh = "Culbachwy"
+				irish = "Caolbati"
+			}
+			b_sandur = {
+				pictish = "Insee Tret"
+				welsh = "Ynys Traeth"
+				irish = "Eilean Tràigh"
+			}
+			b_klaksvik = {
+				pictish = "Insee Uun"
+				welsh = "Ynys Edn"
+				irish = "Innis Eun"
+			}
+			b_hov = {
+				pictish = "Icluasc"
+				welsh = "Eglwys"
+				irish = "Eaglais"
+			}
 		}
 		c_shetland = {
 			color = { 145 132 38 }
@@ -13339,21 +13455,55 @@ k_north_sea = {
 			norse = "Hjaltland"
 			english_norse = "Hjaltland"
 			scottish = "Sealtainn"
+			pictish = "Insee Cait"
+			welsh = "Ynysoedd Cait"
+			irish = "Innse Catt"
 			
-			b_scalloway = {}
-			b_muness = {}
-			b_tingwall = {}
+			b_scalloway = {
+				pictish = "Bachuuon Maurt"
+				welsh = "Bachwyon Mawrty"
+				irish = "Batin Môrtaigh"
+			}
+			b_muness = {
+				pictish = "Muunis"
+				welsh = "Mwynis"
+				irish = "Mùnis"
+			}
+			b_tingwall = {
+				pictish = "Camanfalioth"
+				welsh = "Cymanfalleoedd"
+				irish = "Coinneamhionad"
+			}
 			b_cunningsburgh = {
 				norwegian = "Konungsborg"
 				danish = "Konungsborg"
 				swedish = "Konungsborg"
 				norse = "Konungsborg"
 				english_norse = "Konungsborg"
+				pictish = "Caer Rui"
+				welsh = "Caer Rhi"
+				irish = "Rìghdùn"
 			}
-			b_sumburgh = {}
-			b_northmavine = {}
-			b_sound = {}
-			b_yell = {}
+			b_sumburgh = {
+				pictish = "Taranupin"
+				welsh = "Taranupenn"
+				irish = "Tàirneanachceann"
+			}
+			b_northmavine = {
+				pictish = "Goglethculder"
+				welsh = "Gogleddculdir"
+				irish = "Tuathcuing"
+			}
+			b_sound = {
+				pictish = "Cliaubae"
+				welsh = "Cleiaubae"
+				irish = "Crèadhbati"
+			}
+			b_yell = {
+				pictish = "Insee Uuan"
+				welsh = "Ynys Gwyn"
+				irish = "Innis Fionn"
+			}
 		}
 		c_orkney = {
 			color = { 50 165 36 }
@@ -13363,7 +13513,10 @@ k_north_sea = {
 			swedish = "Orknö"
 			danish = "Orknø"
 			english_norse = "Orknö"	
-			norse = "Orknö"			
+			norse = "Orknö"	
+			pictish = "Insee Orc"
+			welsh = "Ynysoedd Orc"
+			irish = "Innse Orc"			
 			
 			b_kirkwall = {
 				norwegian = "Kirkuvåg"
@@ -13371,6 +13524,9 @@ k_north_sea = {
 				swedish = "Kyrkovik"
 				norse = "Kyrkovik"
 				english_norse = "Kyrkovik"
+				pictish = "Icluasctreh"
+				welsh = "Eglwystref"
+				irish = "Baile na h-Eaglais"
 			}
 			b_birsay = {
 				norwegian = "Birgishærad"
@@ -13378,13 +13534,40 @@ k_north_sea = {
 				swedish = "Birgishärad"
 				norse = "Birgishærad"
 				english_norse = "Birgishærad"
+				pictish = "Brideclauet"
+				welsh = "Ffraidclywed"
+				irish = "Brìghdechuala"
 			}
-			b_orphir = {}
-			b_westray = {}
-			b_wyre = {}
-			b_egilsay = {}
-			b_sanday = {}
-			b_ronaldsay = {}
+			b_orphir = {
+				pictish = "Aerfur"
+				welsh = "Aerfwr"
+				irish = "Ayrfir"
+			}
+			b_westray = {
+				pictish = "Driduana"
+				welsh = "Driduana"
+				irish = "Triduana"
+			}
+			b_wyre = {
+				pictish = "Insee Ware"
+				welsh = "Ynys Wyre"
+				irish = "Innis Weir"
+			}
+			b_egilsay = {
+				pictish = "Insee Icluasc"
+				welsh = "Ynys Eglwys"
+				irish = "Innis Eaglais"
+			}
+			b_sanday = {
+				pictish = "Insee Tiuod"
+				welsh = "Ynys Tywod"
+				irish = "Innis Tràigh"
+			}
+			b_ronaldsay = {
+				pictish = "Insee Ninian"
+				welsh = "Ynys Ninian"
+				irish = "Innis Ronan"
+			}
 		}
 	}	
 }
@@ -13400,6 +13583,7 @@ k_norway = {
 	catholic = 10 #Crusade target weight
 	finnish_pagan_reformed = 5
 	norse_pagan_reformed = 100 # Crusade target weight
+	german_pagan_reformed = 100 # Crusade target weight
 	
 	allow = {
 		is_adult = yes
@@ -13421,9 +13605,7 @@ k_norway = {
 					culture = norwegian
 					culture = norse
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_norway = {
 				OR = {
@@ -13637,6 +13819,8 @@ k_norway = {
 			b_maere = {
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
+				holy_site = german_pagan
+				holy_site = german_pagan_reformed
 			}
 			b_leksvik = {}
 			b_halsstein = {}
@@ -13654,6 +13838,7 @@ k_sami = {
 	
 	finnish_pagan_reformed = 50 # Crusade target weight
 	norse_pagan_reformed = 20
+	german_pagan_reformed = 20
 	
 	norse = Norrbotten
 	swedish = Norrland
@@ -13678,9 +13863,7 @@ k_sami = {
 		OR = {
 			AND = {
 				culture = lappish
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_sami = {
 				OR = {
@@ -13697,12 +13880,12 @@ k_sami = {
 		
 		capital = 278 #Halogaland
 		
-		lappish = Finnmárku
-		norse = Nordnoge
-		swedish = Nordland
-		danish = Nordland
-		finnish = Nordland
-		norwegian = Nordland
+		lappish = "Finnmárku"
+		norse = "Nord-Norge"
+		swedish = "Nordland"
+		danish = "Nordland"
+		finnish = "Nordland"
+		norwegian = "Nord-Norge"
 		
         allow = {
 			is_adult = yes
@@ -13757,12 +13940,12 @@ k_sami = {
 		color2 = { 255 0 0 }
 		capital = 285 # Hälsingland
 		
-		lappish = Lappland
-		norse = Lappmarken
-		swedish = Norrland
-		danish = Norrland
-		finnish = Norrland
-		norwegian = Norrland
+		lappish = "Lappland"
+		norse = "Lappmarken"
+		swedish = "Norrland"
+		danish = "Norrland"
+		finnish = "Norrland"
+		norwegian = "Norrland"
 		
         allow = {
 			is_adult = yes
@@ -13900,32 +14083,33 @@ k_sami = {
 			b_veteli = {}
 		}
 	}
-	d_kandalax = {
+	d_kola = {
 		color = { 141 39 43 }
 		color2 = { 255 0 0 }
 		
 		culture = lappish
 		
-		capital = 850 #Kandalax
-		
-		swedish = "Kandalax"
-		norse = "Kandalax"
-		norwegian = "Kandalax"
-		danish = "Kandalax"
-		russian = "Kandalaksha"
+		capital = 387 #Kandalax
 		
         allow = {
 			is_adult = yes
 			has_regent = no
 			war = no
-			OR = {
-				culture = lappish
-				d_kandalax = {
-					has_holder = yes
-				}
-			}
         }
 		
+		c_kola = {
+			color = { 15 110 161 }
+			color2 = { 255 255 255 }
+		
+			b_kola = {}
+			b_mafelskoi = {}
+			b_pechenga = {}
+			b_waranger = {}
+			b_tre = {}
+			b_lovozero = {}
+			b_molovskoi = {}
+			b_jekanskoi = {}
+		}
 		c_kandalax = {
 			color = { 232 84 178 }
 			color2 = { 255 255 255 }
@@ -13951,19 +14135,6 @@ k_sami = {
 			b_ponoy = {}
 			b_pyaozero = {}
 		}
-		c_kola = {
-			color = { 15 110 161 }
-			color2 = { 255 255 255 }
-		
-			b_kola = {}
-			b_mafelskoi = {}
-			b_pechenga = {}
-			b_waranger = {}
-			b_tre = {}
-			b_lovozero = {}
-			b_molovskoi = {}
-			b_jekanskoi = {}
-		}
 	}
 }
 
@@ -13981,6 +14152,7 @@ k_sweden = {
 	baltic_pagan_reformed = 5 # Crusade target weight
 	finnish_pagan_reformed = 5
 	norse_pagan_reformed = 10
+	german_pagan_reformed = 10
 	
 	norse = Sviþjod
 
@@ -14004,9 +14176,7 @@ k_sweden = {
 					culture = swedish
 					culture = norse
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_sweden = {
 				OR = {
@@ -14097,6 +14267,7 @@ k_sweden = {
 		color2 = { 255 188 0 }
 		
 		norse_pagan_reformed = 500 # Crusade target weight
+		german_pagan_reformed = 50 # Crusade target weight
 		
 		dignity = 8
 		
@@ -14132,6 +14303,8 @@ k_sweden = {
 				norse = Uppsalir			
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
+				holy_site = german_pagan
+				holy_site = german_pagan_reformed
 			}
 			b_osteras = {
 				norse = "Østerås"
@@ -14531,6 +14704,7 @@ k_finland = {
 	
 	finnish_pagan_reformed = 50 # Crusade target weight
 	norse_pagan_reformed = 20
+	german_pagan_reformed = 5
 	baltic_pagan_reformed = 10
 	slavic_pagan_reformed = 5
 	
@@ -14551,9 +14725,7 @@ k_finland = {
 		OR = {
 			AND = {
 				culture_group = finno_ugric
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_finland = {
 				OR = {
@@ -14592,6 +14764,8 @@ k_finland = {
 			finnish = "Inkeri"
 			ugricbaltic = "Inkeri"
 			russian = "Ingriya"
+			ilmenian = "Ingriya"
+			severian = "Ingriya"
 		
 			b_nyen = {
 				finnish = "Nevanlinna"
@@ -15036,9 +15210,7 @@ k_andalusia = {
 		OR = {
 			AND = {
 				culture = andalusian_arabic
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_andalusia = {
 				OR = {
@@ -15394,9 +15566,7 @@ k_aragon = {
 		OR = {
 			AND = {
 				culture = castillan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_aragon = {
 				OR = {
@@ -16079,9 +16249,7 @@ k_castille = { #Spain
 		OR = {
 			AND = {
 				culture = castillan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_castille = {
 				OR = {
@@ -16276,9 +16444,7 @@ k_navarra = {
 		OR = {
 			AND = {
 				culture = basque
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_navarra = {
 				OR = {
@@ -16389,9 +16555,7 @@ k_portugal = {
 		OR = {
 			AND = {
 				culture = portuguese
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_portugal = {
 				OR = {
@@ -16641,6 +16805,7 @@ k_ireland = {
 	
 	catholic = 10 #Crusade target weight
 	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	celtic_pagan_reformed = 1000 #crusade target weight
 	
 	norse = Irland
@@ -16666,9 +16831,7 @@ k_ireland = {
 		OR = {
 			AND = {
 				culture = irish
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_ireland = {
 				OR = {
@@ -17053,16 +17216,18 @@ k_scotland = {
 	
 	catholic = 10 #Crusade target weight
 	norse_pagan_reformed = 20 # Crusade target weight
+	german_pagan_reformed = 20 # Crusade target weight
 	celtic_pagan_reformed = 100 #Crusade target weight
 	
-	norse = Skottland
-	english_norse = Skottland
-	swedish = Skottland
-	danish = Skotland
-	norwegian = Skottland
-	welsh = Alba
-	irish = Albion
-	breton = Albion
+	norse = "Skottland"
+	english_norse = "Skottland"
+	swedish = "Skottland"
+	danish = "Skotland"
+	norwegian = "Skottland"
+	welsh = "Alban"
+	irish = "Albion"
+	breton = "Albion"
+	pictish = "Pictland"
 	
 	allow = {
 		is_adult = yes
@@ -17081,9 +17246,7 @@ k_scotland = {
 		OR = {
 			AND = {
 				culture = scottish
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_scotland = {
 				OR = {
@@ -17101,6 +17264,8 @@ k_scotland = {
 		capital = 50 # Galloway
 		
 		welsh = "Strathclyde"
+		pictish = "Nouantia"
+		irish = "Gall-Ghaidhealaibh"
 		
 		allow = {
 			is_adult = yes
@@ -17111,44 +17276,152 @@ k_scotland = {
 		c_galloway = {
 			color = { 27 177 185 }
 			color2 = { 255 255 255 }
+			
+			pictish = "Nouantia"
+			welsh = "Nofant"
+			irish = "Na Rannaibh"
 					
-			b_dumfries = {}
-			b_dunragit = {}
+			b_dumfries = {
+				pictish = "Dunrad"
+				welsh = "Dinrhyd"
+				irish = "Dùn Phris"
+			}
+			b_dunragit = {
+				pictish = "Dunreget"
+				welsh = "Din Rheged"
+				irish = "Dùn Reicheit"
+			}
 			b_whithorn = {
+				pictish = "Taiuuan"
+				welsh = "Tygwyn"
+				irish = "Taigh Mhàrtainn"
 				holy_site = celtic_pagan
                 holy_site = celtic_pagan_reformed
 			}
-			b_dunrod = {}
-			b_kirkcudbright = {}
-			b_glenluce = {}
-			b_wigtown = {}
-			b_threave = {}
+			b_dunrod = {
+				pictish = "Dun Brin"
+				welsh = "Din Brenin"
+				irish = "Dùn Droighnein"
+			}
+			b_kirkcudbright = {
+				pictish = "Cuthberbatu"
+				welsh = "Cuddbertbetws"
+				irish = "Cill Chuithbeirt"
+			}
+			b_glenluce = {
+				pictish = "Ulanchuan"
+				welsh = "Glynchwyn"
+				irish = "Ghlinn Lus"
+			}
+			b_wigtown = {
+				pictish = "Betrah"
+				welsh = "Faetref"
+				irish = "Baile na h-Ùige"
+			}
+			b_threave = {
+				pictish = "Insee Datrah"
+				welsh = "Ynys Dytref"
+				irish = "Eilean na h-Uisge Dhè"
+			}
 		}
 		c_carrick = {
 			color = { 109 235 111 }
 			color2 = { 255 255 255 }
 			
-			b_turnberry = {}
-			b_dunure = {}
-			b_maybole = {}
-			b_crossraguel = {}
-			b_loch_doon = {}
-			b_ballantrae = {}
-			b_culzean = {}
-			b_greenan = {}
+			pictish = "Ueron"
+			welsh = "Aeron"
+			irish = "A' Charraig"
+			
+			b_turnberry = {
+				pictish = "Dun Ueron"
+				welsh = "Din Aeron"
+				irish = "Dùn Àir"
+			}
+			b_dunure = {
+				pictish = "Dunauen"
+				welsh = "Din Ywen"
+				irish = "Dùn Iùbhair"
+			}
+			b_maybole = {
+				pictish = "Maescanatan"
+				welsh = "Y Maes Ynfytyn"
+				irish = "Am Magh Baoghail"
+			}
+			b_crossraguel = {
+				pictish = "Crosc Ruagal"
+				welsh = "Croes Rhygal"
+				irish = "Crois Riagal"
+			}
+			b_loch_doon = {
+				scottish = "Balloch"
+				pictish = "Landun"
+				welsh = "Llyndin"
+				irish = "Loch Dhùin"
+			}
+			b_ballantrae = {
+				pictish = "Tretrah"
+				welsh = "Traethtref"
+				irish = "Baile na Tràgha"
+			}
+			b_culzean = {
+				pictish = "Pinaglan"
+				welsh = "Pennyglyn"
+				irish = "Ceann na Gleann"
+			}
+			b_greenan = {
+				pictish = "Abereron"
+				welsh = "Aberaeron"
+				irish = "Inbhir Àir"
+			}
 		}
 		c_clydesdale = {
 			color = { 78 160 20 }
 			color2 = { 255 255 255 }
 			
-			b_renfrew = {}
-			b_st_kentigern = {}
-			b_glasgow = {}
-			b_lanark = {}
-			b_cadzow = {}
-			b_bothwell = {}
-			b_lesmahagow = {}
-			b_dumbarton = {}
+			pictish = "Damnunia"
+			welsh = "Alt Clut"
+			irish = "Dail Chluaidh"
+			
+			b_renfrew = {
+				pictish = "Bregurun"
+				welsh = "Brigffroen"
+				irish = "Rinn Friù"
+			}
+			b_st_kentigern = {
+				pictish = "Cantearn"
+				welsh = "Cyndeyrn Sant"
+				irish = "Cill Mungo"
+			}
+			b_glasgow = {
+				pictish = "Catuuris"
+				welsh = "Cathures"
+				irish = "Glaschu"
+			}
+			b_lanark = {
+				pictish = "Lanirc"
+				welsh = "Lanerc"
+				irish = "Lannraig"
+			}
+			b_cadzow = {
+				pictish = "Uuohan"
+				welsh = "Guofan"
+				irish = "Bàile Ghobhainn"
+			}
+			b_bothwell = {
+				pictish = "Mamuanon"
+				welsh = "Mamffynnon"
+				irish = "Tobar na Màthar"
+			}
+			b_lesmahagow = {
+				pictish = "Lanmahau"
+				welsh = "Llanmahagw"
+				irish = "Lios MoChuda"
+			}
+			b_dumbarton = {
+				pictish = "Alcluit"
+				welsh = "Alt Clut"
+				irish = "Dùn Breatainn"
+			}
 		}
 	}
 	d_western_isles = {
@@ -17162,6 +17435,9 @@ k_scotland = {
 		swedish = "Söröarna"
 		norse = "Suðreyjar"
 		english_norse = "Suðreyjar"
+		pictish = "Insee Hilth"
+		welsh = "Ynysoedd Heledd"
+		irish = "Dál Riata"
 		
 		pagan_coa = {
 			template = 0
@@ -17190,27 +17466,61 @@ k_scotland = {
 			danish = "Søreyar"
 			swedish = "Söröarna"
 			norse = "Suðreyjar"
+			pictish = "Carnonac"
+			welsh = "Ynysoedd Heledd"
+			irish = "Innse Gall"
+			scottish = "Innse Gall"
 			
-			b_snizort = {}
-			b_finlaggan = {}
-			b_iona = {}
+			b_snizort = {
+				pictish = "Lantalarc"
+				welsh = "Llantalarican"
+				irish = "Cill Targhlain"
+			}
+			b_finlaggan = {
+				pictish = "Inseepirt"
+				welsh = "Ynysporth"
+				irish = "Port an Eilein"
+			}
+			b_iona = {
+				pictish = "Auenle"
+				welsh = "Ywenlle"
+				irish = "Ì Chaluim Chille"
+			}
 			b_stornoway = {
 				norwegian = "Stornavåg"
 				danish = "Stornavik"
 				swedish = "Stornavik"
 				norse = "Stornavik"
 				english_norse = "Stornavik"
+				pictish = "Laueube"
+				welsh = "Llywiobae"
+				irish = "Steòrnabhagh"
 			}
-			b_laggan = {}
+			b_laggan = {
+				pictish = "Nuuathuchel"
+				welsh = "Neuadduchel"
+				irish = "Àird Talla"
+			}
 			b_uig = {
 				norwegian = "Vik"
 				danish = "Vik"
 				swedish = "Vik"
 				norse = "Vik"
 				english_norse = "Vik"
+				pictish = "Betret"
+				welsh = "Baetraeth"
+				irish = "Càrnais Ùige"
 			}
-			b_dunvegan = {}
-			b_dunyveg = {}
+			b_dunvegan = {
+				pictish = "Dun Bachain"
+				welsh = "Din Bychan"
+				irish = "Dùn Bheagain"
+			}
+			b_dunyveg = {
+				pictish = "Dun Galiuu"
+				welsh = "Din Galïau"
+				irish = "Dùn Naomhaig"
+			}
 		}
 		c_isle_of_man = {
 			color = { 18 152 193 }
@@ -17221,6 +17531,9 @@ k_scotland = {
 			swedish = "Mann"
 			norse = "Mann"
 			english_norse = "Mann"
+			pictish = "Insee Manu"
+			welsh = "Ynys Manaw"
+			irish = "Ellan Mhannin"
 			
 			b_peel = {
 				norwegian = "Pålø"
@@ -17228,14 +17541,48 @@ k_scotland = {
 				swedish = "Pålø"
 				norse = "Pålø"
 				english_norse = "Pålø"
+				pictish = "Pirtinsee"
+				welsh = "Porth Ynys"
+				irish = "Purt ny h-Inshey"
 			}
-			b_rushen = {}
-			b_maughold = {}
-			b_douglas = {}
-			b_kirk_michael = {}
-			b_sulby = {}
-			b_inis_patraic = {}
-			b_laxey = {}
+			b_rushen = {
+				pictish = "Resan"
+				welsh = "Resyn"
+				irish = "Rosien"
+			}
+			b_maughold = {
+				pictish = "Mauugan"
+				welsh = "Mawgan Sant"
+				irish = "Macaille"
+			}
+			b_douglas = {
+				pictish = "Duunglasc"
+				welsh = "Duonglassafon"
+				irish = "Duboglassio"
+			}
+			b_kirk_michael = {
+				pictish = "Icluasc Mihagal"
+				welsh = "Eglwys Mihangel"
+				irish = "Cill Micheál"
+			}
+			b_sulby = {
+				pictish = "Drauuglan"
+				welsh = "Drywglyn"
+				irish = "Druígleann"
+				norwegian = "Sõlabyr"
+				danish = "Sõlabyr"
+				swedish = "Sõlabyr"
+			}
+			b_inis_patraic = {
+				pictish = "Inees Pedric"
+				welsh = "Ynys Padric"
+				irish = "Inis Pátraic"
+			}
+			b_laxey = {
+				pictish = "Ahonugad"
+				welsh = "Afoneogiaid"
+				irish = "Uisge Bradán"
+			}
 		}
 		c_argyll = {
 			color = { 141 216 12 }
@@ -17542,6 +17889,10 @@ k_wales = {
 	catholic = 10 #Crusade target weight
 	celtic_pagan_reformed = 100 #Crusade target weight
 	
+	welsh = "Brythoniaid"
+	breton = "Kembre"
+	irish = "Bhreatain Bheag"
+	
 	allow = {
 		is_adult = yes
 		has_regent = no
@@ -17559,9 +17910,7 @@ k_wales = {
 		OR = {
 			AND = {
 				culture = welsh
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_wales = {
 				OR = {
@@ -17830,9 +18179,7 @@ k_afghanistan = {
 		OR = {
 			AND = {
 				culture = afghan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_afghanistan = {
 				OR = {
@@ -17859,7 +18206,10 @@ k_afghanistan = {
 			color = { 135 90 30 }
 			color2 = { 255 255 255 }
 			
-			b_kabul = {}
+			b_kabul = {
+				holy_site = zun_pagan
+				holy_site = zun_pagan_reformed
+			}
 			b_adinapur = {}
 			b_nagarahara = {}
 			b_kapisa = {}
@@ -17921,7 +18271,10 @@ k_afghanistan = {
 			
 			b_bost = {} # Aka Lashgar Gah
 			b_kandahar = {}
-			b_zamindawar = {}
+			b_zamindawar = {
+				holy_site = zun_pagan
+				holy_site = zun_pagan_reformed
+			}
 			b_sangin = {}
 			b_gereshk = {}
 			b_chaman = {}
@@ -17997,9 +18350,7 @@ k_arabia = {
 		OR = {
 			AND = {
 				culture = bedouin_arabic
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_arabia = {
 				OR = {
@@ -18203,7 +18554,8 @@ k_arabia = {
 		
 			b_medina = {
 				holy_site = sunni
-				holy_site = shiite				
+				holy_site = shiite
+				holy_site = ibadi
 			}
 			b_khaybar = {}
 			b_rabig = {}
@@ -18224,6 +18576,7 @@ k_arabia = {
 				holy_site = shiite
 				holy_site = pagan
 				holy_site = yazidi
+				holy_site = ibadi
 			}
 			b_taif = {}
 			b_al_johfa = {}
@@ -18351,7 +18704,9 @@ k_arabia = {
 			color2 = { 255 255 255 }
 		
 			b_alhamra = {}
-			b_nizwa = {}
+			b_nizwa = {
+				holy_site = ibadi
+			}
 			b_ibri = {}
 			b_jabrin = {}
 			b_rustaq = {}
@@ -18621,9 +18976,7 @@ k_baluchistan = {
 		OR = {
 			AND = {
 				culture = afghan
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_baluchistan = {
 				OR = {
@@ -18787,8 +19140,12 @@ k_jerusalem = {
 	
 	# Creation Effect
 #	gain_effect = {
-#		prestige = 5000
-#		piety = 2000
+#		if = {
+#			limit = { NOT = { has_character_flag = created_jerusalem } }
+#			prestige = 5000
+#			piety = 2000 
+#			set_character_flag = created_jerusalem
+#		}
 #	}
 	
 	bedouin_arabic = "Filastin"
@@ -18820,9 +19177,7 @@ k_jerusalem = {
 		OR = {
 			AND = {
 				culture = levantine_arabic
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_jerusalem = {
 				OR = {
@@ -19077,6 +19432,7 @@ k_jerusalem = {
 				holy_site = jewish
 				holy_site = samaritan
 				holy_site = karaite
+				holy_site = ibadi
 				ashkenazi = "Yerushalayim"
 				sephardi = "Yerushalayim"
 				mizrahim = "Yerushalayim"
@@ -19243,9 +19599,7 @@ k_khwarizm = {
 					culture = turkish
 					culture = persian
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_khwarizm = {
 				OR = {
@@ -19683,9 +20037,7 @@ k_mesopotamia = {
 					culture_group = arabic
 					culture = persian
 				}
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_mesopotamia = {
 				OR = {
@@ -19837,6 +20189,8 @@ k_mesopotamia = {
 			b_baqubah = {}
 			b_bagdad = {
 				holy_site = sunni
+				holy_site = zun_pagan
+				holy_site = zun_pagan_reformed
 			}
 			b_hillah = {}
 			b_iskandariya = {}
@@ -20034,9 +20388,7 @@ k_persia = {
 		OR = {
 			AND = {
 				culture = persian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_persia = {
 				OR = {
@@ -20608,9 +20960,7 @@ k_syria = {
 		OR = {
 			AND = {
 				culture = levantine_arabic
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_syria = {
 				OR = {
@@ -21060,9 +21410,7 @@ k_armenia = {
 		OR = {
 			AND = {
 				culture = armenian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_armenia = {
 				OR = {
@@ -21446,9 +21794,7 @@ k_azerbaijan = {
 		OR = {
 			AND = {
 				culture = persian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_azerbaijan = {
 				OR = {
@@ -21711,9 +22057,7 @@ k_georgia = {
 		OR = {
 			AND = {
 				culture = georgian
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_georgia = {
 				OR = {
@@ -21877,9 +22221,7 @@ k_nikaea = {
 		OR = {
 			AND = {
 				culture = greek
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_nikaea = {
 				OR = {
@@ -21934,7 +22276,9 @@ k_nikaea = {
 			b_praenetos = {}
 			b_calpe = {}
 			b_palodes = {}
-			b_adapazari = {}
+			b_adapazari = {
+				greek = "Mesonesion"
+			}
 			b_malagina = {}
 		}
 		c_prusa = {
@@ -22381,9 +22725,7 @@ k_trebizond = {
 		OR = {
 			AND = {
 				culture = greek
-				NOT = {
-					num_of_king_titles = 2
-				}
+				lower_tier_than = king
 			}
 			k_trebizond = {
 				OR = {

@@ -2160,6 +2160,7 @@ k_germany = {
 				OR = {
 					culture = german
 					culture = frankish
+					culture = old_frankish
 				}
 				lower_tier_than = king
 			}
@@ -2175,7 +2176,7 @@ k_germany = {
 		color = { 150 162 182 }
 		color2 = { 255 255 255 }
 		
-		capital = 310 #Anhalt
+		capital = 311 #Plauen
 		
 		allow = {
 			is_adult = yes
@@ -3043,7 +3044,7 @@ k_lotharingia = {
 	color = { 220 138 57 }
 	color2 = { 255 255 255 }
 
-	capital = 117 #Brabant
+	capital = 129 #Verdun
 	
 	culture = frankish
 	
@@ -3073,6 +3074,7 @@ k_lotharingia = {
 				OR = {
 					culture = german
 					culture = frankish
+					culture = old_frankish
 				}
 				lower_tier_than = king
 			}
@@ -4550,7 +4552,10 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 		}
 		OR = {
 			AND = {
+				OR = {
 				culture = frankish
+					culture = old_frankish
+				}
 				lower_tier_than = king
 			}
 			k_france = {
@@ -5176,6 +5181,8 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 		color = { 0 38 255 }
 		color2 = { 255 0 0 }
 			
+		capital = 1513 # Alencon
+			
 		allow = {
 			is_adult = yes
 			has_regent = no
@@ -5242,7 +5249,10 @@ k_aquitaine = {
 		}
 		OR = {
 			AND = {
+				OR = {
 				culture = occitan
+					culture = old_frankish
+				}
 				lower_tier_than = king
 			}
 			k_aquitaine = {
@@ -6025,6 +6035,7 @@ k_burgundy = {
 				OR = {
 					culture = occitan
 					culture = frankish
+					culture = old_frankish
 				}
 				lower_tier_than = king
 			}
@@ -12098,7 +12109,7 @@ k_perm = {
 		color = { 170 207 253 }
 		color2 = { 255 255 255 }
 		
-		capital = 401 # Hlynov
+		capital = 400 # Zyriane
 		
 		allow = {
 			is_adult = yes
@@ -13938,7 +13949,7 @@ k_sami = {
 	d_norrland = { 
 		color = { 241 241 242 }
 		color2 = { 255 0 0 }
-		capital = 285 # Hälsingland
+		capital = 281 # Angermanland
 		
 		lappish = "Lappland"
 		norse = "Lappmarken"
@@ -17261,6 +17272,8 @@ k_scotland = {
 		color={ 10 48 243 }
 		color2={ 255 255 255 }
 		
+		capital = 54 #Mann
+		
 		welsh = Manaw
 		norwegian = "Mann"
 		danish = "Mann"
@@ -18128,6 +18141,8 @@ k_wales = {
 		color2 = { 255 255 255 }
 		
 		english = "Central Wales"
+			
+		capital = 65 # Powys
 			
 		allow = {
 			is_adult = yes
@@ -20874,7 +20889,7 @@ k_persia = {
 		color = { 194 140 86 }
 		color2 = { 255 255 255 }
 		
-		capital = 687 #Kirkuk
+		capital = 665 #Dailam
 	
 		allow = {
 			is_adult = yes
@@ -22224,6 +22239,9 @@ k_georgia = {
 k_nikaea = {
 	color = { 101 102 163 }
 	color2 = { 255 255 23 }
+	
+	capital = 750 # Nikaea
+	
 	culture = greek
 	
 	catholic = 75 # Crusade target weight

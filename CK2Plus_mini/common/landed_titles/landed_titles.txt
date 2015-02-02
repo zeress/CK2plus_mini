@@ -40,10 +40,6 @@ k_england = {
 					top_liege = { has_landed_title = e_byzantium }
 				}
 			}
-			NOT = {
-				has_global_flag = witan_abolished
-				has_global_flag = witan_abolished_norwegian
-			}
 		}
 		OR = {
 			AND = {
@@ -970,103 +966,6 @@ k_england = {
 		}
 	}
 }
-
-k_englandnorman = { #England of William the Conqueror
-	color = { 202 26 26 }
-	color2 = { 255 255 255 }
-	
-	capital = 32 # Middlesex
-	
-	catholic = 10 #Crusade target weight
-	norse_pagan_reformed = 20 # Crusade target weight
-	german_pagan_reformed = 20 # Crusade target weight
-	celtic_pagan_reformed = 50 # Crusade target weight
-	
-	welsh = "Lloegyr"
-	irish = "Sasana"
-	
-	allow = {
-		is_adult = yes
-		has_regent = no
-		war = no
-		ruled_years = 5
-		hidden_tooltip = {
-			OR = {
-				ai = no
-				NOT = {
-					has_landed_title = e_byzantium
-					top_liege = { has_landed_title = e_byzantium }
-				}
-			}
-			has_global_flag = witan_abolished
-		}
-		OR = {
-			AND = {
-				OR = {
-					culture = norman
-					culture = frankish
-					culture = english
-				}
-				lower_tier_than = king
-			}
-			k_englandnorman = {
-				OR = {
-					is_titular = no
-					has_holder = yes
-				}
-			}
-		}
-	}
-}
-
-k_englandnorwegian = { #England of Harald the Conqueror
-	color = { 202 26 26 }
-	color2 = { 255 255 255 }
-	
-	capital = 32 # Middlesex
-	
-	catholic = 10 #Crusade target weight
-	norse_pagan_reformed = 20 # Crusade target weight
-	german_pagan_reformed = 20 # Crusade target weight
-	celtic_pagan_reformed = 50 #Crusade target weight
-	
-	welsh = "Lloegyr"
-	irish = "Sasana"
-	
-	allow = {
-		is_adult = yes
-		has_regent = no
-		war = no
-		ruled_years = 5
-		hidden_tooltip = {
-			OR = {
-				ai = no
-				NOT = {
-					has_landed_title = e_byzantium
-					top_liege = { has_landed_title = e_byzantium }
-				}
-			}
-			has_global_flag = witan_abolished_norwegian
-		}
-		OR = {
-			AND = {
-				OR = {
-					culture = norwegian
-					culture = english_norse
-					culture = english
-				}
-				lower_tier_than = king
-			}
-			k_englandnorwegian = {
-				OR = {
-					is_titular = no
-					has_holder = yes
-				}
-			}
-		}
-	}
-}
-
 
 # Central Europe
 k_bohemia = {
@@ -2140,6 +2039,12 @@ k_germany = {
 		has_regent = no
 		ruled_years = 5
 		war = no
+		custom_tooltip = {
+			text = germany_formed
+			hidden_tooltip = {
+				has_global_flag = carolingian_empire_formed
+			}
+		}
 		hidden_tooltip = {
 			NOT = { has_landed_title = e_hre }
 			top_liege = {
@@ -2176,13 +2081,37 @@ k_germany = {
 		color = { 150 162 182 }
 		color2 = { 255 255 255 }
 		
-		capital = 311 #Plauen
+		capital = 310 #Anhalt
 		
 		allow = {
 			is_adult = yes
 			has_regent = no
 			war = no
 		}
+		
+		c_anhalt = {
+			color = { 103 161 191 }
+			color2 = { 255 255 255 }
+
+			pommeranian = Dolomici
+			
+			b_zerbst = {	
+				pommeranian = Zirwisti
+			}
+			b_magdeburg = {	
+				pommeranian = Magadoburg			
+			}
+			b_haldensleben = {
+				pommeranian = Hahaldeslevo
+			}
+			b_mansfeld = {}
+			b_dessau = {}
+			b_arnstein = {}
+			b_querfurt = {
+				pommeranian = Curnfurt
+			}
+			b_bernburg = {}
+		}		
 		
 		c_plauen = {
 			color = { 36 204 187 }
@@ -4380,29 +4309,6 @@ k_pomerania = {
 			war = no
 		}
 
-		c_anhalt = {
-			color = { 103 161 191 }
-			color2 = { 255 255 255 }
-
-			pommeranian = Dolomici
-			
-			b_zerbst = {	
-				pommeranian = Zirwisti
-			}
-			b_magdeburg = {	
-				pommeranian = Magadoburg			
-			}
-			b_haldensleben = {
-				pommeranian = Hahaldeslevo
-			}
-			b_mansfeld = {}
-			b_dessau = {}
-			b_arnstein = {}
-			b_querfurt = {
-				pommeranian = Curnfurt
-			}
-			b_bernburg = {}
-		}		
 		c_altmark = {
 			color = { 145 75 25 }
 			color2 = { 255 255 255 }
@@ -4530,6 +4436,8 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 	
 	capital = 112 # Ile de France
 	culture = frankish
+	
+	dignity = 15
 	
 	catholic = 100 #Crusade target weight
 	norse_pagan_reformed = 10 # Crusade target weight
@@ -5245,6 +5153,7 @@ k_aquitaine = {
 					has_landed_title = k_france
 					top_liege = { has_landed_title = e_byzantium }
 				}
+				has_character_flag = is_charlemagne
 			}
 		}
 		OR = {
@@ -9151,7 +9060,6 @@ k_venice = {
 	culture = italian
 	
 	dignity = 200 # Never want the Republic of Venice to change primary title
-	primary = yes # This does the above better.
 	
 	bedouin_arabic = "al-Bunduqiyah"
 	maghreb_arabic = "al-Bunduqiyah"
@@ -11947,12 +11855,12 @@ k_novgorod = {
 		color2 = { 255 255 255 }
 		
 		capital = 572 # Yaroslavl
-		finnish = "Merya"
-		lappish = "Merya"
-		ugricbaltic = "Merya"
-		komi = "Merya"
-		samoyed = "Merya"
-		mordvin = "Merya"
+		finnish = "Merä"
+		lappish = "Merä"
+		ugricbaltic = "Merä"
+		komi = "Merä"
+		samoyed = "Merä"
+		mordvin = "Merä"
 		
         allow = {
 			is_adult = yes
@@ -14764,52 +14672,6 @@ k_finland = {
 			war = no
         }
 		
-		c_vodi = {
-			color = { 246 244 30 }
-			color2 = { 255 255 255 }
-
-			norwegian = "Ingermanland"
-			danish = "Ingermanland"
-			swedish = "Ingermanland"
-			norse = "Ingermanland"
-			finnish = "Inkeri"
-			ugricbaltic = "Inkeri"
-			russian = "Ingriya"
-			ilmenian = "Ingriya"
-			severian = "Ingriya"
-		
-			b_nyen = {
-				finnish = "Nevanlinna"
-				ugricbaltic = "Nevanlinna"
-			}
-			b_noteborg = {
-				norse = "Nöteborg"
-				german = "Schlüsselburg"
-				russian = "Oreshek"
-			}
-			b_valaam = {
-				finnish = "Valamo"
-				ugricbaltic = "Valamo"
-				swedish = "Valamo"
-				norse = "Valamo"
-			}
-			b_jogopera = {}
-			b_ivanovskaya = { # Teusina
-				swedish = "Teusina"
-				norwegian = "Teusina"
-				norse = "Teusina"
-				danish = "Teusina"
-				russian = "Tyavzino"
-			}
-			b_nosok = {}
-			b_liivtsula = {}
-			b_khotchino = {
-				finnish = "Hatsina"
-				ugricbaltic = "Hatsina"
-				swedish = "Hatsina"
-				norse = "Hatsina"
-			}
-		}	
 		c_kexholm = {
 			color = { 167 222 226 }
 			color2 = { 255 255 255 }
@@ -14895,6 +14757,53 @@ k_finland = {
 			war = no
         }
 	
+		c_vodi = {
+			color = { 246 244 30 }
+			color2 = { 255 255 255 }
+
+			norwegian = "Ingermanland"
+			danish = "Ingermanland"
+			swedish = "Ingermanland"
+			norse = "Ingermanland"
+			finnish = "Inkeri"
+			ugricbaltic = "Inkeri"
+			russian = "Ingriya"
+			ilmenian = "Ingriya"
+			severian = "Ingriya"
+		
+			b_nyen = {
+				finnish = "Nevanlinna"
+				ugricbaltic = "Nevanlinna"
+			}
+			b_noteborg = {
+				norse = "Nöteborg"
+				german = "Schlüsselburg"
+				russian = "Oreshek"
+			}
+			b_valaam = {
+				finnish = "Valamo"
+				ugricbaltic = "Valamo"
+				swedish = "Valamo"
+				norse = "Valamo"
+			}
+			b_jogopera = {}
+			b_ivanovskaya = { # Teusina
+				swedish = "Teusina"
+				norwegian = "Teusina"
+				norse = "Teusina"
+				danish = "Teusina"
+				russian = "Tyavzino"
+			}
+			b_nosok = {}
+			b_liivtsula = {}
+			b_khotchino = {
+				finnish = "Hatsina"
+				ugricbaltic = "Hatsina"
+				swedish = "Hatsina"
+				norse = "Hatsina"
+			}
+		}
+		
 		c_reval = {
 			color = { 205 93 61 }
 			color2 = { 255 255 255 }
@@ -18242,12 +18151,12 @@ k_afghanistan = {
 			color = { 135 90 30 }
 			color2 = { 255 255 255 }
 			
-			b_kabul = {
+			b_kabul = {}
+			b_adinapur = {}
+			b_nagarahara = {
 				holy_site = zun_pagan
 				holy_site = zun_pagan_reformed
 			}
-			b_adinapur = {}
-			b_nagarahara = {}
 			b_kapisa = {}
 			b_lampara = {}
 			b_kunar = {}

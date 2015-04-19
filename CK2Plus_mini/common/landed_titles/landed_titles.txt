@@ -24353,7 +24353,7 @@ k_egypt = {
 	}
 }
 
-k_morocco = {
+k_mauretania = {
 	color = { 58 41 188 }
 	color2 = { 255 255 255 }
 	
@@ -24393,6 +24393,49 @@ k_morocco = {
 			}
 		}
 	}	
+}
+
+k_morocco = {
+	color = { 224 146 113 }
+	color2 = { 255 255 255 }
+	
+	capital = 843 # Marrakech
+	culture = maghreb_arabic
+	
+	catholic = 10 #Crusade target weight
+	muslim = 10 # Crusade target weight
+	west_african_pagan_reformed = 10
+	
+	allow = {
+		is_adult = yes
+		has_regent = no
+		war = no
+		ruled_years = 5
+		hidden_tooltip = {
+			OR = {
+				ai = no
+				NOT = {
+					has_landed_title = e_byzantium
+					top_liege = { has_landed_title = e_byzantium }
+				}
+			}
+		}
+		OR = {
+			AND = {
+				culture = maghreb_arabic
+				NOT = {
+					num_of_king_titles = 2
+				}
+			}
+			k_morocco = {
+				OR = {
+					is_titular = no
+					has_holder = yes
+				}
+			}
+		}
+	}
+
 
 	d_ifni = {
 		color = { 179 102 48 }
@@ -24494,50 +24537,7 @@ k_morocco = {
 				sicilian_arabic = "Kif"
 			}
 		}		
-	}
-}
-
-k_morocco = {
-	color = { 224 146 113 }
-	color2 = { 255 255 255 }
-	
-	capital = 843 # Marrakech
-	culture = maghreb_arabic
-	
-	catholic = 10 #Crusade target weight
-	muslim = 10 # Crusade target weight
-	west_african_pagan_reformed = 10
-	
-	allow = {
-		is_adult = yes
-		has_regent = no
-		war = no
-		ruled_years = 5
-		hidden_tooltip = {
-			OR = {
-				ai = no
-				NOT = {
-					has_landed_title = e_byzantium
-					top_liege = { has_landed_title = e_byzantium }
-				}
-			}
-		}
-		OR = {
-			AND = {
-				culture = maghreb_arabic
-				NOT = {
-					num_of_king_titles = 2
-				}
-			}
-			k_morocco = {
-				OR = {
-					is_titular = no
-					has_holder = yes
-				}
-			}
-		}
-	}
-	
+	}	
 	d_marrakech = {
 		color = { 191 126 128 }
 		color2 = { 255 255 255 }

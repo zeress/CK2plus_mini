@@ -10,8 +10,6 @@
 ##################################
 
 
-# England gets to be by itself due to special mechanics
-
 # Central Europe
 k_bohemia = {
 	color = { 176 110 32 }
@@ -30,10 +28,10 @@ k_bohemia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
+		top_liege = {
+			OR = {
+				NOT = { has_law = kingdom_lockout_0 }
+				has_landed_title = e_hre
 			}
 		}
 		OR = {
@@ -306,12 +304,7 @@ k_carpathia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -842,12 +835,7 @@ k_frisia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -1068,12 +1056,7 @@ k_germany = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -1996,12 +1979,7 @@ k_lotharingia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -2345,12 +2323,7 @@ k_poland = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -2928,12 +2901,7 @@ k_pomerania = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -3436,12 +3404,7 @@ k_france = { # Has to be above Aquitaine because Aquitaine references it
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -4134,12 +4097,7 @@ k_aquitaine = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -4662,12 +4620,7 @@ k_brittany = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -4904,12 +4857,7 @@ k_burgundy = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -5204,12 +5152,7 @@ k_bulgaria = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -5439,12 +5382,7 @@ k_byzantium = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -6189,12 +6127,7 @@ k_croatia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -6440,12 +6373,7 @@ k_italy = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -7151,12 +7079,7 @@ k_sardinia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -7252,12 +7175,7 @@ k_serbia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -7462,12 +7380,7 @@ k_sicily = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -7991,12 +7904,7 @@ k_venice = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -8063,12 +7971,7 @@ k_wallachia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -8250,12 +8153,7 @@ k_khazaria = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -8592,12 +8490,7 @@ k_crimea = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -8826,12 +8719,7 @@ k_cuman = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -9138,12 +9026,7 @@ k_lithuania = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -9721,12 +9604,7 @@ k_livonia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -10006,12 +9884,7 @@ k_muscovy = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -10489,12 +10362,7 @@ k_novgorod = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -10960,12 +10828,7 @@ k_perm = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -11306,12 +11169,7 @@ k_rus = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -11620,12 +11478,7 @@ k_volga = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -11881,12 +11734,7 @@ k_denmark = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -12200,12 +12048,7 @@ k_north_sea = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -12501,12 +12344,7 @@ k_norway = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -12756,12 +12594,7 @@ k_sami = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		ROOT = {
 			NOT = {
 				culture_group = north_germanic
@@ -13066,12 +12899,7 @@ k_sweden = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -13613,12 +13441,7 @@ k_finland = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -13997,12 +13820,7 @@ k_andalusia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			has_global_flag = umayyad_has_fallen
 			has_global_flag = 867_start_umayyad
@@ -14351,12 +14169,7 @@ k_aragon = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -14757,12 +14570,7 @@ k_asturias = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -15030,12 +14838,7 @@ k_castille = { #Spain
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -15219,12 +15022,7 @@ k_navarra = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -15324,12 +15122,7 @@ k_portugal = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -15568,7 +15361,7 @@ k_portugal = {
 
 
 
-# British Isles (minus England)
+# British Isles
 
 k_england = {
 	color = { 202 26 26 }
@@ -15592,16 +15385,7 @@ k_england = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = {
-					top_liege = {
-						primary_title = { has_title_flag = no_kingdoms }
-					}
-				}
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -16548,12 +16332,7 @@ k_ireland = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -16957,12 +16736,7 @@ k_scotland = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -17644,12 +17418,7 @@ k_wales = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -17911,12 +17680,7 @@ k_afghanistan = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -18080,12 +17844,7 @@ k_arabia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -18700,12 +18459,7 @@ k_baluchistan = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -18885,12 +18639,7 @@ k_jerusalem = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -19298,12 +19047,7 @@ k_khwarizm = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -19731,12 +19475,7 @@ k_mesopotamia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -20079,12 +19818,7 @@ k_persia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -20645,12 +20379,7 @@ k_syria = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -21089,12 +20818,7 @@ k_armenia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -21467,12 +21191,7 @@ k_azerbaijan = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -21724,12 +21443,7 @@ k_georgia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -21885,12 +21599,7 @@ k_nikaea = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -22384,12 +22093,7 @@ k_trebizond = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -22529,12 +22233,7 @@ k_algiers = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -22852,12 +22551,7 @@ k_morocco = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -23173,12 +22867,7 @@ k_abyssinia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -23480,12 +23169,7 @@ k_adal = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -23609,12 +23293,7 @@ k_africa = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -23920,12 +23599,7 @@ k_egypt = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			has_global_flag = fatimid_has_fallen
 			has_global_flag = 867_start_fatimid
@@ -24293,12 +23967,7 @@ k_nubia = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -24492,12 +24161,7 @@ k_andhra = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -24692,12 +24356,7 @@ k_bengal = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -25072,12 +24731,7 @@ k_bihar = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -25381,12 +25035,7 @@ k_delhi = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -25662,12 +25311,7 @@ k_gondwana = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -25784,12 +25428,7 @@ k_gujarat = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -26097,12 +25736,7 @@ k_kamarupa = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -26264,12 +25898,7 @@ k_karnata = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -26624,12 +26253,7 @@ k_kosala = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -26908,12 +26532,7 @@ k_lanka = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -27057,12 +26676,7 @@ k_maharastra = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -27490,12 +27104,7 @@ k_malwa = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -27760,12 +27369,7 @@ k_orissa = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -28109,12 +27713,7 @@ k_punjab = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -28478,12 +28077,7 @@ k_rajputana = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -28819,12 +28413,7 @@ k_sindh = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -29043,12 +28632,7 @@ k_tamilakam = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
@@ -29365,12 +28949,7 @@ k_telingana = {
 		has_regent = no
 		war = no
 		ruled_years = 5
-		custom_tooltip = {
-			text = TOP_LIEGE_ALLOWS_KINGDOMS
-			hidden_tooltip = {
-				NOT = { top_liege = { primary_title = { has_title_flag = no_kingdoms } } }
-			}
-		}
+		top_liege = { NOT = { has_law = kingdom_lockout_0 } }
 		OR = {
 			FROM = { has_holder = yes }
 			FROM = { is_titular = no }
